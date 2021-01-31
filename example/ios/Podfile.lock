@@ -1,0 +1,113 @@
+PODS:
+  - AppLovinSDK (6.14.8)
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTASN1 (1.7.13):
+    - DTFoundation/Core
+  - FBAudienceNetwork (6.2.0):
+    - FBSDKCoreKit/Basics (>= 7.0.1)
+  - FBSDKCoreKit/Basics (9.0.0)
+  - Flutter (1.0.0)
+  - Google-Mobile-Ads-SDK (7.64.0):
+    - GoogleAppMeasurement (~> 6.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAds-IMA-iOS-SDK (3.11.3)
+  - GoogleAppMeasurement (6.9.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - GoogleUserMessagingPlatform (1.4.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
+  - IronSourceSDK (7.0.3.0)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - PromisesObjC (1.2.12)
+  - scale_monk (0.1.1):
+    - AppLovinSDK (= 6.14.8)
+    - DTFoundation/DTASN1 (= 1.7.13)
+    - FBAudienceNetwork (= 6.2.0)
+    - Flutter
+    - Google-Mobile-Ads-SDK (= 7.64.0)
+    - GoogleAds-IMA-iOS-SDK (= 3.11.3)
+    - IronSourceSDK (= 7.0.3.0)
+    - StackConsentManager (= 1.0.1)
+    - UAObfuscatedString (~> 0.3.2)
+    - UnityAds (= 3.5.0)
+    - VungleSDK-iOS (= 6.8.1)
+  - StackConsentManager (1.0.1)
+  - UAObfuscatedString (0.3.2)
+  - UnityAds (3.5.0)
+  - VungleSDK-iOS (6.8.1)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - scale_monk (from `.symlinks/plugins/scale_monk/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AppLovinSDK
+    - DTFoundation
+    - FBAudienceNetwork
+    - FBSDKCoreKit
+    - Google-Mobile-Ads-SDK
+    - GoogleAds-IMA-iOS-SDK
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - IronSourceSDK
+    - nanopb
+    - PromisesObjC
+    - StackConsentManager
+    - UAObfuscatedString
+    - UnityAds
+    - VungleSDK-iOS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  scale_monk:
+    :path: ".symlinks/plugins/scale_monk/ios"
+
+SPEC CHECKSUMS:
+  AppLovinSDK: 688001bd8d1763672f0ca763467ffeba6c654718
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
+  FBAudienceNetwork: 69193f0362accc40305703fb3265342416971446
+  FBSDKCoreKit: ac6cc500b8e104bb9a4dd20b1527b5d199123c2e
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  Google-Mobile-Ads-SDK: aec52559ce73ddf1e6478d1904dd71a741f1bc61
+  GoogleAds-IMA-iOS-SDK: 134b35758455576aaa6b3d2d3146699dcf8af4f1
+  GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
+  GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  IronSourceSDK: 9787d1c3e1d93a03d59edce53eb1f8063f5889b7
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  scale_monk: d5ead8737b417c8433099b0eb7233ddc4343aa56
+  StackConsentManager: 2e7c7512d4c1b5dddf248e7e9f78931d8d0142e8
+  UAObfuscatedString: 128d0df4876ad570ef07c7851e27e094c6e080a9
+  UnityAds: 84b080493348d6995771f171e6bdc3c84b198686
+  VungleSDK-iOS: 0405589c8626b2511dd57214a17e0d65e0d2f424
+
+PODFILE CHECKSUM: fe0e1ee7f3d1f7d00b11b474b62dd62134535aea
+
+COCOAPODS: 1.10.1
