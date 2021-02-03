@@ -14,16 +14,11 @@ class ScaleMonk {
 
   //! ScaleMonk
 
-  /// Define the ScaleMonk App Id for Android and iOS. At least one of the keys must be set, otherwise an error will be
-  /// thrown during the initialization.
-  static void setApplicationIds(
-      {String? androidApplicationId, String? iosApplicationId}) {
+  /// Initialize the ScaleMonk plugin.
+  static Future<bool> initialize(
+      {String? androidApplicationId, String? iosApplicationId}) async {
     _androidApplicationId = androidApplicationId;
     _iosApplicationId = iosApplicationId;
-  }
-
-  /// Initialize the ScaleMonk plugin.
-  static Future<bool> initialize() async {
     assert(_androidApplicationId != null || _iosApplicationId != null,
         'You must set at least one of the keys for Android or iOS');
 
@@ -71,8 +66,8 @@ class ScaleMonk {
   /// otherwise you can call this method with false. If you dont call
   /// this method we assume the user is not under age of consent and
   /// you have to send whether the user accpeted or not the consent
-  static Future setUserCanGiveGDPRConsent({required bool hasConsent}) async {
-    return _channel.invokeMethod('setUserCanGiveGDPRConsent', {
+  static Future setUserCantGiveGDPRConsent({required bool hasConsent}) async {
+    return _channel.invokeMethod('setUserCantGiveGDPRConsent', {
       'hasConsent': hasConsent,
     });
   }

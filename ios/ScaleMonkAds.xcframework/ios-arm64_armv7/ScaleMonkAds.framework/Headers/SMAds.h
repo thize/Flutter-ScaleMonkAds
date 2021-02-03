@@ -2,7 +2,7 @@
 //
 //  © 2020 ScaleMonk, Inc. All Rights Reserved.
 // Licensed under the ScaleMonk SDK License Agreement
-// https://www.scalemonk.com/legal/en-US/mediation-license-agreement/index.html
+// http://www.scalemonk.com/legal/en-US/mediation-license-agreement 
 //
 
 #import <Foundation/Foundation.h>
@@ -18,8 +18,6 @@
 - (instancetype)initWith:(NSString *)applicationId;
 
 - (void)initialize:(void (^)(BOOL))done;
-
-- (void)initialize;
 
 - (void)addVideoListener:(id <SMRewardedVideoAdEventListener>)listener;
 

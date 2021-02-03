@@ -2,7 +2,7 @@
 //
 //  © 2020 ScaleMonk, Inc. All Rights Reserved.
 // Licensed under the ScaleMonk SDK License Agreement
-// https://www.scalemonk.com/legal/en-US/mediation-license-agreement/index.html
+// http://www.scalemonk.com/legal/en-US/mediation-license-agreement 
 //
 
 #import <Foundation/Foundation.h>
@@ -48,6 +48,3 @@ FOUNDATION_EXPORT const unsigned char MediationVersionString[];
 #import "SMFacebookProvider.h"
 #import "SMUnityAdsProvider.h"
 #import "SMVungleProvider.h"
-#import "SMGenericProvider.h"
-#import "SMISDemandOnlyRewardedVideoDelegate.h"
-#import "SMISDemandOnlyInterstitialDelegate.h"

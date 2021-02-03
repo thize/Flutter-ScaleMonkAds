@@ -174,95 +174,91 @@
 		</data>
 		<key>Headers/AuctionProviderProtocol.h</key>
 		<data>
-		XSn+wOdP446W2hLoaLegXW/EuLU=
+		MUeXOqZe0fgcTkLOCh7aP1cLIBo=
 		</data>
 		<key>Headers/ExecuteWithObjCExceptionHandling.h</key>
 		<data>
-		xM/XCd3kCkNj0pdenhGwy0AaQvg=
+		c1oyZmZ4HrAKnZS1pzsLQwxxh5w=
 		</data>
 		<key>Headers/SMAdMobProvider.h</key>
 		<data>
-		BV8Yg46XlT3NGwVr/RxBudGfop4=
+		H/q6OxbT8pgI/n9HodG0xeypLrE=
 		</data>
 		<key>Headers/SMAds.h</key>
 		<data>
-		91aRItOIaoW0qyc82wifgTmDEiM=
+		Tbhd6fUkDK2CnDTAjXnp/2msrhQ=
 		</data>
 		<key>Headers/SMAdsConstants.h</key>
 		<data>
-		QOHpmL5NMwRMHMMnaHPntehNShw=
+		BTEttAp8adRirfHFHiYq3Xwgoak=
 		</data>
 		<key>Headers/SMAdsRTBLoggerProtocol.h</key>
 		<data>
-		NMjicYImbez9yCOA1NR++o129bo=
+		7lnjwDU2ZGXMTAWh6EXn6OEcGFI=
 		</data>
 		<key>Headers/SMAnalyticsListener.h</key>
 		<data>
-		UgSigCHpeFMOXZhuerhZlgSdG0A=
+		CmrZlzncwwt08h4bxDiKF9gEJhU=
 		</data>
 		<key>Headers/SMAppLovinInterstitialDelegate.h</key>
 		<data>
-		I+iajnxxHvmQyejYTE81umYu3oA=
+		+SKCx5rmDwEpSydQDZz7MYzuM+g=
 		</data>
 		<key>Headers/SMAppLovinProvider.h</key>
 		<data>
-		zjBfIglYkfml57bkX6S9LHuDiCo=
+		CJQTY048zbEvXtRHtpjWmP31QJM=
 		</data>
 		<key>Headers/SMAppLovinVideoDelegate.h</key>
 		<data>
-		wrRRL337CjWBkCRlXRNYxBmJBsc=
+		GuKYq3MLNpZZwBPHnKv0LxrucnU=
 		</data>
 		<key>Headers/SMApplovinAdloadDelegate.h</key>
 		<data>
-		/y0njpY2Mv3UUwm4C7jJNPJ3zw0=
+		Gdke0BnmoC/FlWEglQttN/bryZM=
 		</data>
 		<key>Headers/SMBannerAdEventListener.h</key>
 		<data>
-		ABSvYZqaXEryePH2peD48RU/m14=
+		nBuJYNeXdsuyyqEiJ5JPELuyaBs=
 		</data>
 		<key>Headers/SMBannerProtocol.h</key>
 		<data>
-		bKyV/1t8ecL3a86WBUdbA/6aCCk=
+		G2gxS3UeZaVx5RiOE312wNKr4lw=
 		</data>
 		<key>Headers/SMBannerView.h</key>
 		<data>
-		2vhLzWBd6qqX+OBBgwq1/TRjfWM=
+		zw9miZXBvdVVZ0LEqIYbzWHeQP8=
 		</data>
 		<key>Headers/SMBannerViewProtocol.h</key>
 		<data>
-		Vzna8DidgftMpwW30Mw0Lnp9Szo=
+		nxn/UnOl6VERmEEWASK1avuzbnE=
 		</data>
 		<key>Headers/SMBuggyProvider.h</key>
 		<data>
-		6on7eybfk1/lCqPpFzD/KymFcSs=
+		xZS+GZltbjmQo60yazmxUx8/rpE=
 		</data>
 		<key>Headers/SMFacebookProvider.h</key>
 		<data>
-		XlzFLYKuzvYwVD8mhBoiuIoUeQA=
-		</data>
-		<key>Headers/SMGenericProvider.h</key>
-		<data>
-		oCNLfL2rXeNQ78VRF7ix6N1NzgQ=
+		NPvA3gE0IOdpvbxB1pGSqQNQqp8=
 		</data>
 		<key>Headers/SMISDemandOnlyInterstitialDelegate.h</key>
 		<data>
-		SZf8k6OEJ+xs1uVofhc2OeNlsR0=
+		R2oC87JyOr6WiPxYIHfWtl1ZSZk=
 		</data>
 		<key>Headers/SMISDemandOnlyRewardedVideoDelegate.h</key>
 		<data>
-		FKlvISzfpImIBGQrZhf80gvrKqg=
+		hUURS4NAVQG+9zJQbInCNW0taqA=
 		</data>
 		<key>Headers/SMInterstitialAdEventListener.h</key>
 		<data>
-		g85BAr9JfUNgVAG+mrI+HUfi0Cw=
+		E2/wOJVAUH+OX9G7p2qheZAe6SQ=
 		</data>
 		<key>Headers/SMInterstitialProtocol.h</key>
 		<data>
-		bh0yOCYXeWEv19gfTOplNFdq/Ic=
+		TdUGJw9ozyQwi0w/FwbdiSnM0wo=
 		</data>
 		<key>Headers/SMIronSourceProvider.h</key>
 		<data>
-		a4EvHYRqnYSJrEc/PKyEzlT6ltw=
+		71wrCuHvjMk8m9GmsVGK8J80DRM=
 		</data>
 		<key>Headers/SMMonitoringReachability.h</key>
 		<data>
@@ -270,75 +266,75 @@
 		</data>
 		<key>Headers/SMProviderCallbacks.h</key>
 		<data>
-		3jYnuunpgNufKU5TT5shiryFIjY=
+		1ldFEol78qYe0JPfYVopVwOlqa0=
 		</data>
 		<key>Headers/SMProviderProtocol.h</key>
 		<data>
-		yrAaDr9bCrPr8j3ny9o3SGXm00I=
+		eUlpAQjuVJsHLhpn25kENBB6diU=
 		</data>
 		<key>Headers/SMProvidersSetup.h</key>
 		<data>
-		ZiJ6/0zzn6rOOfoQfU2uCQkG1s0=
+		ot2LhdM0WyABj2nHNxk0XKYefbQ=
 		</data>
 		<key>Headers/SMRTBWaterfallEntry.h</key>
 		<data>
-		31HEFl1YzEXIM3/q5N5z9H/QFfU=
+		CKWrF79g9vq1UuJ6ALXbRV7Mgus=
 		</data>
 		<key>Headers/SMRewardedVideoAdEventListener.h</key>
 		<data>
-		ypUCBAl3KLagWu0Gczl9zv0rGV8=
+		aXJtQbkA3hfV/iMukLasbBqIsks=
 		</data>
 		<key>Headers/SMUnityAdsProvider.h</key>
 		<data>
-		nJ6hlqy5w7/0nDqCwcWub/WKhcI=
+		+7eT4eFJ/K3BLST8cAjJsfSuykg=
 		</data>
 		<key>Headers/SMVideoProtocol.h</key>
 		<data>
-		LsHCJTvk+EfoO/Pc2T+kM1/IK8E=
+		1fUAuwJm0IlPf+xhkQhN9R2Z66k=
 		</data>
 		<key>Headers/SMVungleProvider.h</key>
 		<data>
-		NkziUDflWr+IjwYLJW/UdOgGdu4=
+		eFrj/730DyWsH+7fZCRoKVgjndw=
 		</data>
 		<key>Headers/SMWaterfallEntry.h</key>
 		<data>
-		i3LrGCp6pJRGvOVFV3bbPEcPu8c=
+		a3aZwltB9CC31v0n30llNkLo0W0=
 		</data>
 		<key>Headers/ScaleMonkAds-Swift.h</key>
 		<data>
-		SQhMWoMMa8BnGoi/Qt0Ye8AHo1I=
+		ZETeVW8e6hVkQRMdNV0OArqQMTc=
 		</data>
 		<key>Headers/ScaleMonkAds.h</key>
 		<data>
-		kpnA32oOoJO6BnTkOx1j4LjRYws=
+		CUWvUOac5k6yZ4bLdrBg579F7i0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		01VS+lS0XZxSssdZqRZ2n7JN/G0=
+		egEEMfMgfulasTdEMicKc9xaQtM=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		In1rSxpVF8bSjK7jqaigWHr0PDc=
+		kjikQXIVJihIbpuQRON6izzQAqk=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FMIrggpx4JK+a1JnP8yKzPCzG4k=
+		TkRpNFWyJS7+hMonK+FLPygxNF4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jt6I1DvezD84ewVyRZCJZzFpNkM=
+		oxBRWJeN0idXo55TqDlT2zOkaFc=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		In1rSxpVF8bSjK7jqaigWHr0PDc=
+		kjikQXIVJihIbpuQRON6izzQAqk=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		FMIrggpx4JK+a1JnP8yKzPCzG4k=
+		TkRpNFWyJS7+hMonK+FLPygxNF4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		jt6I1DvezD84ewVyRZCJZzFpNkM=
+		oxBRWJeN0idXo55TqDlT2zOkaFc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -813,253 +809,242 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XSn+wOdP446W2hLoaLegXW/EuLU=
+			MUeXOqZe0fgcTkLOCh7aP1cLIBo=
 			</data>
 			<key>hash2</key>
 			<data>
-			PNPH0qxdM2xqw2Rcp3HV/IIayLbtwjMSvqfXViyqLXY=
+			RIZbgm0CtVBc8wNmw1dIazlLhf1jakp2NVKU5NUH8gQ=
 			</data>
 		</dict>
 		<key>Headers/ExecuteWithObjCExceptionHandling.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xM/XCd3kCkNj0pdenhGwy0AaQvg=
+			c1oyZmZ4HrAKnZS1pzsLQwxxh5w=
 			</data>
 			<key>hash2</key>
 			<data>
-			bjfecTYZdcEjUVxlGZ7UkUjvYnwm2t8yC3QPm40yA1w=
+			VF2hd2+IJyodNYnaUI9Y9YmZ4bP6o7pTeBkbcKTZjHg=
 			</data>
 		</dict>
 		<key>Headers/SMAdMobProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BV8Yg46XlT3NGwVr/RxBudGfop4=
+			H/q6OxbT8pgI/n9HodG0xeypLrE=
 			</data>
 			<key>hash2</key>
 			<data>
-			/ceeeCkLHngIDiQT6fn666SYQftlwU/ngQ38FM4C5EQ=
+			VSAKw1VBE3PF5sOQvtXYVbmbWJoHIeQEOs6To5mYUwo=
 			</data>
 		</dict>
 		<key>Headers/SMAds.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			91aRItOIaoW0qyc82wifgTmDEiM=
+			Tbhd6fUkDK2CnDTAjXnp/2msrhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NvZRpJVIGwTEoy5AUjk7kDB6O6kRpodx2nMrbXEZNBs=
+			NKO2R/1RHHs7MtdD/Vf5WZJ4J4jYSDDvCkytNYl1maw=
 			</data>
 		</dict>
 		<key>Headers/SMAdsConstants.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QOHpmL5NMwRMHMMnaHPntehNShw=
+			BTEttAp8adRirfHFHiYq3Xwgoak=
 			</data>
 			<key>hash2</key>
 			<data>
-			ydLCbIoT9OOou2rRPyMqSfAJHGtCUrvqdU+87I7UK0o=
+			7UTnSvw1rRMPNnb0lSi1wy3X+cRXF6EMKsoGcqxfAIo=
 			</data>
 		</dict>
 		<key>Headers/SMAdsRTBLoggerProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NMjicYImbez9yCOA1NR++o129bo=
+			7lnjwDU2ZGXMTAWh6EXn6OEcGFI=
 			</data>
 			<key>hash2</key>
 			<data>
-			blYE4dF+DrETTdxHpIY2WvbMg3KWjLbsWE5/TrcADe8=
+			5V/FPRwv+Kj8HxlWLdELmFkWWBNHlLEWesC78VnZxs4=
 			</data>
 		</dict>
 		<key>Headers/SMAnalyticsListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UgSigCHpeFMOXZhuerhZlgSdG0A=
+			CmrZlzncwwt08h4bxDiKF9gEJhU=
 			</data>
 			<key>hash2</key>
 			<data>
-			449CmcEDS07oBBCSKYYG9PiMmUatjJJZvKBah6V8sfA=
+			ha797VqTwNsNRCRKOiIRic8TAREMZu+QbJE65ZahUFo=
 			</data>
 		</dict>
 		<key>Headers/SMAppLovinInterstitialDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I+iajnxxHvmQyejYTE81umYu3oA=
+			+SKCx5rmDwEpSydQDZz7MYzuM+g=
 			</data>
 			<key>hash2</key>
 			<data>
-			gfjDmMWaAugJ5RzMybjMQv1B7PtoM4HEWMpcj5GkHrQ=
+			I68X/28DmCgZRhyJGN5PFHXiMULsdjzD8WK59WaBfm0=
 			</data>
 		</dict>
 		<key>Headers/SMAppLovinProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zjBfIglYkfml57bkX6S9LHuDiCo=
+			CJQTY048zbEvXtRHtpjWmP31QJM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yClpG94qL55JGn7Q4NoiM4fm7W2QJl/jJpwwaPte1Ko=
+			23F6wXu6rmY7zy4cMCOym3vBXtjUBh3GsKbK+UPrID8=
 			</data>
 		</dict>
 		<key>Headers/SMAppLovinVideoDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wrRRL337CjWBkCRlXRNYxBmJBsc=
+			GuKYq3MLNpZZwBPHnKv0LxrucnU=
 			</data>
 			<key>hash2</key>
 			<data>
-			giOWDvbqgogFns/QeHIUHmtCXFTwCNVLzxHShVlPYx4=
+			AZmRDl+39LSM9R9NMpB0A5bd9b6j11Cv++zPB9qsy1M=
 			</data>
 		</dict>
 		<key>Headers/SMApplovinAdloadDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/y0njpY2Mv3UUwm4C7jJNPJ3zw0=
+			Gdke0BnmoC/FlWEglQttN/bryZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			GxVkILZ/YoW/Ay7gUr0sIeuNMnHajUglVNYkVYMnqrs=
+			onTHrM8F+Y0yb1l7BRnzqU0O7MIgqRBSxGGPPl28Zuw=
 			</data>
 		</dict>
 		<key>Headers/SMBannerAdEventListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ABSvYZqaXEryePH2peD48RU/m14=
+			nBuJYNeXdsuyyqEiJ5JPELuyaBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			sRk1LmyB9+m/E8e39ns1LCbHGH2EAyDIy0rGricy0BA=
+			3/SEFxmj0a88VX9DdDiYhHblaJALqw+gGjxJd1N/LCY=
 			</data>
 		</dict>
 		<key>Headers/SMBannerProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bKyV/1t8ecL3a86WBUdbA/6aCCk=
+			G2gxS3UeZaVx5RiOE312wNKr4lw=
 			</data>
 			<key>hash2</key>
 			<data>
-			a9L2zmyluSe8DeYudbp59HJY80qPkD7t/OIg31hcGw4=
+			QK1k2duR43avFI54EbHVY7je1qjEYEP7dJCUBAAski8=
 			</data>
 		</dict>
 		<key>Headers/SMBannerView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2vhLzWBd6qqX+OBBgwq1/TRjfWM=
+			zw9miZXBvdVVZ0LEqIYbzWHeQP8=
 			</data>
 			<key>hash2</key>
 			<data>
-			DpKakVSmLMWYoz5jx2k7UTUBUjXHYDwofDYJu4k2XQk=
+			qGGr9WIt/TfoB0qE5I8Ccy40XMoM5f/9jPeFVCGTf1k=
 			</data>
 		</dict>
 		<key>Headers/SMBannerViewProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Vzna8DidgftMpwW30Mw0Lnp9Szo=
+			nxn/UnOl6VERmEEWASK1avuzbnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			iqbdNmTNw5koBdhZXkberxmuvX7EXjCYCvbMf7Alo6Q=
+			CUxKdUdNJUfeu8YrNJ29qi3RgSxEq3EvZvtfx2Cpe/c=
 			</data>
 		</dict>
 		<key>Headers/SMBuggyProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6on7eybfk1/lCqPpFzD/KymFcSs=
+			xZS+GZltbjmQo60yazmxUx8/rpE=
 			</data>
 			<key>hash2</key>
 			<data>
-			uRxtiIGlpfHq7jnBj8A4xtla9V7y4ulWjo96qv0nE+o=
+			tadvBt8i9Na3+qn1xhrxLpfqoOTIVtY46RT2ICZG9xs=
 			</data>
 		</dict>
 		<key>Headers/SMFacebookProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XlzFLYKuzvYwVD8mhBoiuIoUeQA=
+			NPvA3gE0IOdpvbxB1pGSqQNQqp8=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Gflf3yOmO2na9iHYT7Lu0RxFk80KbUYcPq4U13zbX8=
-			</data>
-		</dict>
-		<key>Headers/SMGenericProvider.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oCNLfL2rXeNQ78VRF7ix6N1NzgQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			A954jmXxtR2BsiuljHmLtONKq9B4Jzswy12hapuWmDM=
+			q3KODuLfUBAtVHsMvM6XtOwY7kv1GOeTTprxK9gcnmk=
 			</data>
 		</dict>
 		<key>Headers/SMISDemandOnlyInterstitialDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SZf8k6OEJ+xs1uVofhc2OeNlsR0=
+			R2oC87JyOr6WiPxYIHfWtl1ZSZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			B80Bn3JB272VDll45eJwq5ivSL16oktZPZ3k4f81Puk=
+			UOtddyo3+HmWG4u25MIKIiVX9A6wBBXbJD1i4Fhidvw=
 			</data>
 		</dict>
 		<key>Headers/SMISDemandOnlyRewardedVideoDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FKlvISzfpImIBGQrZhf80gvrKqg=
+			hUURS4NAVQG+9zJQbInCNW0taqA=
 			</data>
 			<key>hash2</key>
 			<data>
-			5nkQd8O52MqYMHs/eGAUiQ4rd/CA4y+AqTYWuwI2rEY=
+			URQDUkqSOlWbge5daRd+oqAWM2nQIsS8rkHHIT7kYyY=
 			</data>
 		</dict>
 		<key>Headers/SMInterstitialAdEventListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g85BAr9JfUNgVAG+mrI+HUfi0Cw=
+			E2/wOJVAUH+OX9G7p2qheZAe6SQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			REP0pfCKOJWXJdf3b2bMdJdSYUAvmBFwMHOT8RpE7Bo=
+			40vYWbhmQ1qZaXc2UhSczA5jYsJGpLRGSrBczL9b4Ek=
 			</data>
 		</dict>
 		<key>Headers/SMInterstitialProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bh0yOCYXeWEv19gfTOplNFdq/Ic=
+			TdUGJw9ozyQwi0w/FwbdiSnM0wo=
 			</data>
 			<key>hash2</key>
 			<data>
-			71sw1rx7O76zWV6iu4QY+59QK7TUbQmx2qBV+3BNdds=
+			3lepTGBtrWg6WsbFHJfAq5GLFB1ZUWHis+fuQXoDI7I=
 			</data>
 		</dict>
 		<key>Headers/SMIronSourceProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4EvHYRqnYSJrEc/PKyEzlT6ltw=
+			71wrCuHvjMk8m9GmsVGK8J80DRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			cKPcFLTJgWnEkQi/TtNYbAlhP1cNwrXqx75i8SfpSAY=
+			dH7eXYWNjQ1Qpy88x8RB5okQtOV2vLdprdSclyV2cOQ=
 			</data>
 		</dict>
 		<key>Headers/SMMonitoringReachability.h</key>
@@ -1077,187 +1062,187 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3jYnuunpgNufKU5TT5shiryFIjY=
+			1ldFEol78qYe0JPfYVopVwOlqa0=
 			</data>
 			<key>hash2</key>
 			<data>
-			tU5XSVcEHyM5nH3QvfShZUmjdbU3yKPQyWYXbMZcwQw=
+			1tL3YGEHM6RGDGO8oRa+HLryNoFyJwm15Lhvr4LI/+w=
 			</data>
 		</dict>
 		<key>Headers/SMProviderProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yrAaDr9bCrPr8j3ny9o3SGXm00I=
+			eUlpAQjuVJsHLhpn25kENBB6diU=
 			</data>
 			<key>hash2</key>
 			<data>
-			VwXo7/JffOE/VijecUWMcxeL1n/Uc+3DO/wG2TPKOsw=
+			caVvbAH4U5Lc4CZHqLL+u+hc6grp/lJJIYBBkJFqtPo=
 			</data>
 		</dict>
 		<key>Headers/SMProvidersSetup.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZiJ6/0zzn6rOOfoQfU2uCQkG1s0=
+			ot2LhdM0WyABj2nHNxk0XKYefbQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			4YQYajdktua/lZimVD60ESZIr8jKxiNPiDlghq/rBqc=
+			lSHOqgJ1T8LZesLo22uaraQ4P8u/b/3PwyA4EIX7hlo=
 			</data>
 		</dict>
 		<key>Headers/SMRTBWaterfallEntry.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			31HEFl1YzEXIM3/q5N5z9H/QFfU=
+			CKWrF79g9vq1UuJ6ALXbRV7Mgus=
 			</data>
 			<key>hash2</key>
 			<data>
-			fsvLeqBSlWPglKVCmU1pzYz0IvuJYnStvGrdi7MaVCE=
+			bHoXTlA3TiLq711zOV2Zec1GZR4Jir6KEJwzuBbNQLY=
 			</data>
 		</dict>
 		<key>Headers/SMRewardedVideoAdEventListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ypUCBAl3KLagWu0Gczl9zv0rGV8=
+			aXJtQbkA3hfV/iMukLasbBqIsks=
 			</data>
 			<key>hash2</key>
 			<data>
-			pm/pXppfXA9cWG/HF7X3wnRihBLIbcc4VtoPxQudy7c=
+			ZeMZfwyNIm1v9z3l1ZGp8BaRsvIV7RQmM0cllyYTzW0=
 			</data>
 		</dict>
 		<key>Headers/SMUnityAdsProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nJ6hlqy5w7/0nDqCwcWub/WKhcI=
+			+7eT4eFJ/K3BLST8cAjJsfSuykg=
 			</data>
 			<key>hash2</key>
 			<data>
-			3zaNUVdpl2bDSLIcxE755prBerPXjbCDfqTrY4yOZ7E=
+			orWCvm8BJ68A+tUNNoo4n65N/J+T+QHHSN2d10UsRdQ=
 			</data>
 		</dict>
 		<key>Headers/SMVideoProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LsHCJTvk+EfoO/Pc2T+kM1/IK8E=
+			1fUAuwJm0IlPf+xhkQhN9R2Z66k=
 			</data>
 			<key>hash2</key>
 			<data>
-			kEBsH9LgclhuL0o7m3D/m1SokwJpqq4d7yUoNk87MFk=
+			lOYsJHjs1ea6XsiiYFFMcrdX79SyiKVZMMki9XrCl0E=
 			</data>
 		</dict>
 		<key>Headers/SMVungleProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NkziUDflWr+IjwYLJW/UdOgGdu4=
+			eFrj/730DyWsH+7fZCRoKVgjndw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bu77Kyi1K7aC1WG6yVOOayRngy+YZeAxRA6w5Z0lwug=
+			ntG2SYQtvHP/hGhRSTOGt6SYazGg1y0YO4T7NHoUeT0=
 			</data>
 		</dict>
 		<key>Headers/SMWaterfallEntry.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i3LrGCp6pJRGvOVFV3bbPEcPu8c=
+			a3aZwltB9CC31v0n30llNkLo0W0=
 			</data>
 			<key>hash2</key>
 			<data>
-			yZ7c9N2On6z762HQEAV/pEjHquq+nnNrwTOnoRV+Fhk=
+			x2milJ5xdyNnjwZKgigr8GNLUB9/HD/QufRGdf6HrWE=
 			</data>
 		</dict>
 		<key>Headers/ScaleMonkAds-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SQhMWoMMa8BnGoi/Qt0Ye8AHo1I=
+			ZETeVW8e6hVkQRMdNV0OArqQMTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ku4z9nPfAhqC5rIcG3UUDCffA0mUPGYynZPfeiG0gYI=
+			R8HUnmXqjXBbEApg+HeUi4DTraEJr9epCOx3tT3BcP0=
 			</data>
 		</dict>
 		<key>Headers/ScaleMonkAds.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kpnA32oOoJO6BnTkOx1j4LjRYws=
+			CUWvUOac5k6yZ4bLdrBg579F7i0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GsEAp0Xe8rUTPV2O21voH9wIK/l/FmxxrOYWUX9Q0ho=
+			b95NYIcOvwD+TyYqShJj05Cr1jzy6Y3cwyVo4Kwa6E4=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			In1rSxpVF8bSjK7jqaigWHr0PDc=
+			kjikQXIVJihIbpuQRON6izzQAqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			iCWsmK2o7hfZu+J7t/23lnd1O13M9XAcmMNdDWKUZwY=
+			JIW32bwQEWOKkQCt4radmi8/BpBXK8wl7nhNBuMOmvU=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FMIrggpx4JK+a1JnP8yKzPCzG4k=
+			TkRpNFWyJS7+hMonK+FLPygxNF4=
 			</data>
 			<key>hash2</key>
 			<data>
-			0YV07mI/Z3GekHRffeAMVtREwHrW5jhQKcLcWVG0A20=
+			hIWjyHLpKnAwh69khapquOwtiFOPn0qI6n/KapMCl9M=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jt6I1DvezD84ewVyRZCJZzFpNkM=
+			oxBRWJeN0idXo55TqDlT2zOkaFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			kWE59zjv3Uaus2OpPsfNwOupBvFrngdkENDlMcHp/1M=
+			0obVK6Fqb9NKEFDkTXFH8Xf6V6Sl/FCIT+bK0UCJRiU=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			In1rSxpVF8bSjK7jqaigWHr0PDc=
+			kjikQXIVJihIbpuQRON6izzQAqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			iCWsmK2o7hfZu+J7t/23lnd1O13M9XAcmMNdDWKUZwY=
+			JIW32bwQEWOKkQCt4radmi8/BpBXK8wl7nhNBuMOmvU=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FMIrggpx4JK+a1JnP8yKzPCzG4k=
+			TkRpNFWyJS7+hMonK+FLPygxNF4=
 			</data>
 			<key>hash2</key>
 			<data>
-			0YV07mI/Z3GekHRffeAMVtREwHrW5jhQKcLcWVG0A20=
+			hIWjyHLpKnAwh69khapquOwtiFOPn0qI6n/KapMCl9M=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jt6I1DvezD84ewVyRZCJZzFpNkM=
+			oxBRWJeN0idXo55TqDlT2zOkaFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			kWE59zjv3Uaus2OpPsfNwOupBvFrngdkENDlMcHp/1M=
+			0obVK6Fqb9NKEFDkTXFH8Xf6V6Sl/FCIT+bK0UCJRiU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

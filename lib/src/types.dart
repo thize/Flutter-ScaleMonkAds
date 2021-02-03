@@ -29,9 +29,6 @@ enum RewardedVideoAdEvent {
 
   ///	The Ad is ready to be shown
   ready,
-
-  ///	The Ad is not ready to be shown
-  notReady,
 }
 
 InterstitialAdEvent interstitialAdEventFromString(String st) =>
@@ -53,9 +50,6 @@ enum InterstitialAdEvent {
 
   /// The Ad is ready to be shown
   ready,
-
-  ///	The Ad is not ready to be shown
-  notReady,
 }
 
 BannerAdEvent bannerAdEventFromString(String st) =>

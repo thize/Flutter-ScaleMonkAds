@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ScaleMonkAds
+// import ScaleMonkAds
 
 // extension SwiftScaleMonkPlugin: InterstitialEventListener {
 //     public func onInterstitialClickWithTag(_: String) {

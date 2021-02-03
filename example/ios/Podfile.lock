@@ -1,8 +1,5 @@
 PODS:
-  - AppLovinSDK (6.14.8)
-  - DTFoundation/Core (1.7.13)
-  - DTFoundation/DTASN1 (1.7.13):
-    - DTFoundation/Core
+  - AppLovinSDK (6.14.5)
   - FBAudienceNetwork (6.2.0):
     - FBSDKCoreKit/Basics (>= 7.0.1)
   - FBSDKCoreKit/Basics (9.0.0)
@@ -10,7 +7,6 @@ PODS:
   - Google-Mobile-Ads-SDK (7.64.0):
     - GoogleAppMeasurement (~> 6.0)
     - GoogleUserMessagingPlatform (~> 1.1)
-  - GoogleAds-IMA-iOS-SDK (3.11.3)
   - GoogleAppMeasurement (6.9.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
     - GoogleUtilities/MethodSwizzler (~> 6.7)
@@ -42,22 +38,20 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - RxSwift (5.1.1)
   - scale_monk (0.1.1):
-    - AppLovinSDK (= 6.14.8)
-    - DTFoundation/DTASN1 (= 1.7.13)
+    - AppLovinSDK (= 6.14.5)
     - FBAudienceNetwork (= 6.2.0)
     - Flutter
     - Google-Mobile-Ads-SDK (= 7.64.0)
-    - GoogleAds-IMA-iOS-SDK (= 3.11.3)
     - IronSourceSDK (= 7.0.3.0)
-    - StackConsentManager (= 1.0.1)
-    - UAObfuscatedString (~> 0.3.2)
-    - UnityAds (= 3.5.0)
-    - VungleSDK-iOS (= 6.8.1)
-  - StackConsentManager (1.0.1)
-  - UAObfuscatedString (0.3.2)
-  - UnityAds (3.5.0)
-  - VungleSDK-iOS (6.8.1)
+    - RxSwift (~> 5)
+    - UnityAds (= 3.5.1)
+    - VungleSDK-iOS (= 6.8.0)
+    - Willow (~> 5.0)
+  - UnityAds (3.5.1)
+  - VungleSDK-iOS (6.8.0)
+  - Willow (5.2.1)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -66,21 +60,19 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppLovinSDK
-    - DTFoundation
     - FBAudienceNetwork
     - FBSDKCoreKit
     - Google-Mobile-Ads-SDK
-    - GoogleAds-IMA-iOS-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - IronSourceSDK
     - nanopb
     - PromisesObjC
-    - StackConsentManager
-    - UAObfuscatedString
+    - RxSwift
     - UnityAds
     - VungleSDK-iOS
+    - Willow
 
 EXTERNAL SOURCES:
   Flutter:
@@ -89,24 +81,22 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/scale_monk/ios"
 
 SPEC CHECKSUMS:
-  AppLovinSDK: 688001bd8d1763672f0ca763467ffeba6c654718
-  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
+  AppLovinSDK: da2bc90688ce98b13c37aa3cfbd040641efbf629
   FBAudienceNetwork: 69193f0362accc40305703fb3265342416971446
   FBSDKCoreKit: ac6cc500b8e104bb9a4dd20b1527b5d199123c2e
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   Google-Mobile-Ads-SDK: aec52559ce73ddf1e6478d1904dd71a741f1bc61
-  GoogleAds-IMA-iOS-SDK: 134b35758455576aaa6b3d2d3146699dcf8af4f1
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   IronSourceSDK: 9787d1c3e1d93a03d59edce53eb1f8063f5889b7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  scale_monk: d5ead8737b417c8433099b0eb7233ddc4343aa56
-  StackConsentManager: 2e7c7512d4c1b5dddf248e7e9f78931d8d0142e8
-  UAObfuscatedString: 128d0df4876ad570ef07c7851e27e094c6e080a9
-  UnityAds: 84b080493348d6995771f171e6bdc3c84b198686
-  VungleSDK-iOS: 0405589c8626b2511dd57214a17e0d65e0d2f424
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  scale_monk: f7223ce6ce256a9ba0aa71c9d44e3ec3c3aeeb97
+  UnityAds: 5cf7348607675db42414a1625f88c2d560f1164c
+  VungleSDK-iOS: bbc198ef21540bde9b9748981b120ae2681738f7
+  Willow: a6310f9aedcb6f4de8c35b94fd3416a660ae9280
 
 PODFILE CHECKSUM: fe0e1ee7f3d1f7d00b11b474b62dd62134535aea
 

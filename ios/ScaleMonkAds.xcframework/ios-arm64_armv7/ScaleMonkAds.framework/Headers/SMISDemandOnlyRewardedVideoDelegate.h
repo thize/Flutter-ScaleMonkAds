@@ -2,14 +2,15 @@
 //
 //  © 2020 ScaleMonk, Inc. All Rights Reserved.
 // Licensed under the ScaleMonk SDK License Agreement
-// https://www.scalemonk.com/legal/en-US/mediation-license-agreement/index.html
+// http://www.scalemonk.com/legal/en-US/mediation-license-agreement 
 //
 
 #import <Foundation/Foundation.h>
+#import "IronSource/IronSource.h"
 #import "SMIronSourceProvider.h"
 
 
-@interface SMISDemandOnlyRewardedVideoDelegate : NSObject
+@interface SMISDemandOnlyRewardedVideoDelegate : NSObject<ISDemandOnlyRewardedVideoDelegate>
 
 - (instancetype)initWithProvider:(SMIronSourceProvider*)provider andAdsInstance:(SMProviderCallbacks*)callbacks;
 

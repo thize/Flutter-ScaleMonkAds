@@ -20,12 +20,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future initScaleMonk() async {
-    ScaleMonk.setApplicationIds(
-      // TODO: androidApplicationId
-      androidApplicationId: 'sm-9999999-99999999',
-      // TODO: iosApplicationId
-      iosApplicationId: 'sm-0000000-00000000',
-    );
     ScaleMonk.setBannerCallback = (BannerAdEvent event) {
       print('Banner ad triggered the event $event');
     };
@@ -35,7 +29,12 @@ class _MyAppState extends State<MyApp> {
     ScaleMonk.setRewardCallback = (RewardedVideoAdEvent event) {
       print('Reward ad triggered the event $event');
     };
-    initialize = await ScaleMonk.initialize();
+    initialize = await ScaleMonk.initialize(
+      // TODO: androidApplicationId
+      androidApplicationId: 'sm-9999999-99999999',
+      // TODO: iosApplicationId
+      iosApplicationId: 'sm-0000000-00000000',
+    );
     print('initialize = $initialize');
     setState(() {});
   }
@@ -84,9 +83,9 @@ class __BodyState extends State<_Body> {
               },
             ),
             RaisedButton(
-              child: Text('call setUserCanGiveGDPRConsent: true'),
+              child: Text('call setUserCantGiveGDPRConsent: true'),
               onPressed: () async {
-                await ScaleMonk.setUserCanGiveGDPRConsent(hasConsent: true);
+                await ScaleMonk.setUserCantGiveGDPRConsent(hasConsent: true);
               },
             ),
             _showAd('Banner', AdType.banner),

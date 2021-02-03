@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ScaleMonkAds
+// import ScaleMonkAds
 
 // extension SwiftScaleMonkPlugin: RewardedVideoAdEventListener {
 //     public func onRewardedClickWithTag(_: String) {

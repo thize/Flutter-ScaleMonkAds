@@ -1,6 +1,5 @@
 import Flutter
 import UIKit
-import StackConsentManager
 import ScaleMonkAds
 
 public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
@@ -22,7 +21,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         case "show": show(call, result)
         case "stopLoadingBanners": stopLoadingBanners(call, result)
         case "setHasGDPRConsent": setHasGDPRConsent(call, result)
-        case "setUserCanGiveGDPRConsent": setUserCanGiveGDPRConsent(call, result)
+        case "setUserCantGiveGDPRConsent": setUserCantGiveGDPRConsent(call, result)
         case "setIsApplicationChildDirected": setIsApplicationChildDirected(call, result)
         default: result(FlutterMethodNotImplemented)
         }
@@ -38,7 +37,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         // setCallbacks()
 
         // // initialize
-        // scaleMonkAds = ScaleMonkAds(applicationId: applicationId)
+        // let scaleMonkAds = ScaleMonkAds(applicationId: applicationId)
         // scaleMonkAds.initialize({ success in
         //     result(success)
         // })
@@ -66,7 +65,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         // scaleMonkAds.setHasGDPRConsent(status in result(status))
     }
 
-    private func setUserCanGiveGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+    private func setUserCantGiveGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         // let args = call.arguments as! [String: Any]
         // let hasConsent = args["hasConsent"] as! Bool
         // scaleMonkAds.setUserCanGiveGDPRConsent(hasConsent)
