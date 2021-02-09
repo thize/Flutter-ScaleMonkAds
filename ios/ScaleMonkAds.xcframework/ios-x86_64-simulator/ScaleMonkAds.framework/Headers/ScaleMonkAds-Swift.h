@@ -375,7 +375,7 @@ SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 /// This removes the current banner from the <code>SMBannerView</code> and stops loading more banners.
 - (void)stopLoadingBanners;
 /// This tag the user as under age or not to complain with COPPA regulation
-/// \param isUnderAge set true if the user is under age, otherwise false. If the age is not tagged we assume the user is not under age.
+/// \param childDirectedTreatment set true if the user is under age, otherwise false. If the age is not tagged we assume the user is not under age.
 ///
 - (void)setIsApplicationChildDirectedWithChildDirectedTreatment:(BOOL)childDirectedTreatment;
 /// Call this method when the user is under age of consent. It means that the user is not able to give a consent to see targeted ads (GDPR)

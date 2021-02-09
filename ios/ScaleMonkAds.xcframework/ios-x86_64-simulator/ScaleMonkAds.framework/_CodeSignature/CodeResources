@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/SMAds.h</key>
 		<data>
-		bUxytNhvG2DqrPLDLVQ/PqW60XA=
+		fzHSVtJJqmbnZN5cqNYlcyuxOX0=
 		</data>
 		<key>Headers/SMAdsConstants.h</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>Headers/ScaleMonkAds-Swift.h</key>
 		<data>
-		1AD1PpxNnLt0G73w6RxfNQ71kSo=
+		stGkKV0gE38uJYOXBw9uL3ZLvcA=
 		</data>
 		<key>Headers/ScaleMonkAds.h</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		eJH5okjhlyuYcM9jKHWboGC9AC4=
+		zYd/mwDH9vSufPQFjb8dDU42Aik=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -326,7 +326,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		eJH5okjhlyuYcM9jKHWboGC9AC4=
+		zYd/mwDH9vSufPQFjb8dDU42Aik=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>
 		<data>
@@ -842,11 +842,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bUxytNhvG2DqrPLDLVQ/PqW60XA=
+			fzHSVtJJqmbnZN5cqNYlcyuxOX0=
 			</data>
 			<key>hash2</key>
 			<data>
-			VSOycd48SUArAK2ghHrXpKZBSzJ27av5HJcZyqRy4+c=
+			7RVOUvEUp7cFihvAyJbCEARY/ZoxgGESplLVW3i5xmk=
 			</data>
 		</dict>
 		<key>Headers/SMAdsConstants.h</key>
@@ -1161,11 +1161,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1AD1PpxNnLt0G73w6RxfNQ71kSo=
+			stGkKV0gE38uJYOXBw9uL3ZLvcA=
 			</data>
 			<key>hash2</key>
 			<data>
-			fIT63sMUHUcakW7ObJdp2gOH5dwJjlkneMuwzv6n3cc=
+			gKzwleOmPR2S/BgCbv6NJ3667bp4YAzvgi3TJDZQw58=
 			</data>
 		</dict>
 		<key>Headers/ScaleMonkAds.h</key>
@@ -1183,11 +1183,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eJH5okjhlyuYcM9jKHWboGC9AC4=
+			zYd/mwDH9vSufPQFjb8dDU42Aik=
 			</data>
 			<key>hash2</key>
 			<data>
-			OOXNxjAwH6ShcPa4E/++WGh4kPgPOYOtb/YKVLNELNs=
+			GWW49VD7giiV+Bv2GQFmYvIZFctRqUUdWQdfN+/1YZ0=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -1216,11 +1216,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eJH5okjhlyuYcM9jKHWboGC9AC4=
+			zYd/mwDH9vSufPQFjb8dDU42Aik=
 			</data>
 			<key>hash2</key>
 			<data>
-			OOXNxjAwH6ShcPa4E/++WGh4kPgPOYOtb/YKVLNELNs=
+			GWW49VD7giiV+Bv2GQFmYvIZFctRqUUdWQdfN+/1YZ0=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>

@@ -68,21 +68,21 @@ class __BodyState extends State<_Body> {
           children: [
             Text('initialize = ${widget.initialize}'),
             RaisedButton(
-              child: Text('call setHasGDPRConsentWithStatus'),
+              child: Text('call setHasGDPRConsent'),
               onPressed: () {
-                ScaleMonk.setHasGDPRConsentWithStatus(true);
+                ScaleMonk.setHasGDPRConsent(status: true);
+              },
+            ),
+            RaisedButton(
+              child: Text('call setUserCantGiveGDPRConsent'),
+              onPressed: () {
+                ScaleMonk.setUserCantGiveGDPRConsent(status: false);
               },
             ),
             RaisedButton(
               child: Text('call setIsApplicationChildDirected'),
               onPressed: () {
                 ScaleMonk.setIsApplicationChildDirected(true);
-              },
-            ),
-            RaisedButton(
-              child: Text('call setUserCantGiveGDPRConsentWithStatus'),
-              onPressed: () {
-                ScaleMonk.setUserCantGiveGDPRConsentWithStatus(true);
               },
             ),
             RaisedButton(
@@ -95,8 +95,7 @@ class __BodyState extends State<_Body> {
             RaisedButton(
               child: Text('isRewardedReadyToShow'),
               onPressed: () async {
-                final dyn =
-                    await ScaleMonk.isRewardedReadyToShow(andTag: 'andTag');
+                final dyn = await ScaleMonk.isRewardedReadyToShow(tag: 'tag');
                 print('isRewardedReadyToShow = $dyn');
               },
             ),
@@ -120,7 +119,7 @@ class __BodyState extends State<_Body> {
     return RaisedButton(
       child: Text('Show $name Ad'),
       onPressed: () {
-        ScaleMonk.show(type, andTag: 'andTag');
+        ScaleMonk.show(type, tag: 'tag');
       },
     );
   }

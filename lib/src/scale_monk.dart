@@ -1,5 +1,6 @@
 library scale_monk;
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:scale_monk/scale_monk.dart';
 
@@ -39,20 +40,20 @@ class ScaleMonk {
   /// Use the constants in the class `AdType` to specify what ad should be shown.
   ///
   /// Returns `true` if the ad is shown.
-  static void show(AdType adType, {String andTag}) {
+  static void show(AdType adType, {String tag}) {
     assert(_androidApplicationId != null || _iosApplicationId != null,
         'You must set at least one of the keys for Android or iOS');
     _channel.invokeMethod('show', {
       'adType': adType.index,
-      'andTag': andTag,
+      'tag': tag,
     });
   }
 
   /// You'll likely want to check availability before offering
   /// the user the possibility of seeing an ad to get a reward using this method
-  static Future<bool> isRewardedReadyToShow({String andTag}) async {
+  static Future<bool> isRewardedReadyToShow({String tag}) async {
     return _channel.invokeMethod('isRewardedReadyToShow', {
-      'andTag': andTag,
+      'tag': tag,
     });
   }
 
@@ -68,9 +69,9 @@ class ScaleMonk {
   /// By sending YES user accepts to share information to receive
   /// tarheted ads. By sending NO user accepts to share information
   /// to receive tarheted ads.
-  static void setHasGDPRConsentWithStatus(bool value) {
-    _channel.invokeMethod('setHasGDPRConsentWithStatus', {
-      'value': value,
+  static void setHasGDPRConsent({@required bool status}) {
+    _channel.invokeMethod('setHasGDPRConsent', {
+      'status': status,
     });
   }
 
@@ -78,9 +79,9 @@ class ScaleMonk {
   /// otherwise you can call this method with false. If you dont call
   /// this method we assume the user is not under age of consent and
   /// you have to send whether the user accpeted or not the consent
-  static void setUserCantGiveGDPRConsentWithStatus(bool value) {
-    _channel.invokeMethod('setUserCantGiveGDPRConsentWithStatus', {
-      'value': value,
+  static void setUserCantGiveGDPRConsent({@required bool status}) {
+    _channel.invokeMethod('setUserCantGiveGDPRConsent', {
+      'status': status,
     });
   }
 

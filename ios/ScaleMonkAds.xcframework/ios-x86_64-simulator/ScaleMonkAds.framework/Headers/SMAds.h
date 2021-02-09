@@ -19,48 +19,60 @@
 
 - (void)initialize:(void (^)(BOOL))done;
 
-- (void)addVideoListener:(id <SMRewardedVideoAdEventListener>)listener;
+- (void)addVideoListener:(id<SMRewardedVideoAdEventListener>)listener;
 
-- (void)addInterstitialListener:(id <SMInterstitialAdEventListener>)listener;
+- (void)addInterstitialListener:(id<SMInterstitialAdEventListener>)listener;
 
-- (void)addBannerListener:(id <SMBannerAdEventListener>)listener;
+- (void)addBannerListener:(id<SMBannerAdEventListener>)listener;
 
 - (void)clearVideoListeners;
 
 - (void)clearInterstitialListeners;
 
 - (void)showInterstitialAdWithViewController:(UIViewController *)viewController
-                                 andTag:(NSString *)tag;
+                                      andTag:(NSString *)tag
+NS_SWIFT_NAME(showInterstitialAd(viewController:tag:));
 
-- (void)showInterstitialAdWithViewController:(UIViewController *)viewController;
+- (void)showInterstitialAdWithViewController:(UIViewController *)viewController
+NS_SWIFT_NAME(showInterstitialAd(viewController:));
 
 - (void)showRewardedVideoAdWithViewController:(UIViewController *)viewController
-                                  andTag:(NSString *)tag;
+                                       andTag:(NSString *)tag
+NS_SWIFT_NAME(showRewardedVideoAd(viewController:tag:));
 
-- (void)showRewardedVideoAdWithViewController:(UIViewController *)viewController;
+- (void)showRewardedVideoAdWithViewController:(UIViewController *)viewController
+NS_SWIFT_NAME(showRewardedVideoAd(viewController:));
 
 - (void)showBannerAdWithViewController:(UIViewController *)viewController
                             bannerView:(SMBannerView *)bannerView
-                           andTag:(NSString *)tag;
+                                andTag:(NSString *)tag
+NS_SWIFT_NAME(showBannerAd(viewController:bannerView:tag:));
 
 - (void)showBannerAdWithViewController:(UIViewController *)viewController
-                            bannerView:(SMBannerView *)bannerView;
+                            bannerView:(SMBannerView *)bannerView
+NS_SWIFT_NAME(showBannerAd(viewController:bannerView:));
 
 - (void)stopLoadingBanners;
 
-- (void)setIsApplicationChildDirected: (BOOL)childDirectedTreatment;
+- (void)setIsApplicationChildDirected:(BOOL)childDirectedTreatment;
 
-- (void)setHasGDPRConsentWithStatus: (BOOL) status;
+- (void)setHasGDPRConsentWithStatus:(BOOL)status
+NS_SWIFT_NAME(setHasGDPRConsent(status:));
 
-- (void)setUserCantGiveGDPRConsentWithStatus: (BOOL) status;
+- (void)setUserCantGiveGDPRConsentWithStatus:(BOOL)status
+NS_SWIFT_NAME(setUserCantGiveGDPRConsent(status:));
 
-- (BOOL)isInterstitialReadyToShow:(NSString *)tag;
+- (BOOL)isInterstitialReadyToShowWithTag:(NSString *)tag
+NS_SWIFT_NAME(isInterstitialReadyToShow(tag:));
 
-- (BOOL)isRewardedReadyToShow:(NSString *)tag;
+- (BOOL)isRewardedReadyToShowWithTag:(NSString *)tag
+NS_SWIFT_NAME(isRewardedReadyToShow(tag:));
 
-- (BOOL)isInterstitialReadyToShow;
+- (BOOL)isInterstitialReadyToShow
+NS_SWIFT_NAME(isInterstitialReadyToShow());
 
-- (BOOL)isRewardedReadyToShow;
+- (BOOL)isRewardedReadyToShow
+NS_SWIFT_NAME(isRewardedReadyToShow());
 
 @end
 
