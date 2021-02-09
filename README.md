@@ -5,6 +5,8 @@
 
 A Flutter plugin to display ads from ScaleMonk. It currently supports __Banner__, __Interstitial__ and __Reward__ ads.
 
+**Note: Currently only iOS platform is supported.**
+
 ## ⚙️ Installation
 
 1. Add the dependency to the `pubspec.yaml` file in your project:
