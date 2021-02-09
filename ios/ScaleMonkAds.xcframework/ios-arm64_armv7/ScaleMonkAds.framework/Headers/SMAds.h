@@ -50,9 +50,17 @@
 
 - (void)setIsApplicationChildDirected: (BOOL)childDirectedTreatment;
 
--(void)setHasGDPRConsentWithStatus: (BOOL) status;
+- (void)setHasGDPRConsentWithStatus: (BOOL) status;
 
--(void)setUserCantGiveGDPRConsentWithIsUserUnderAgeOfConsent: (BOOL) status;
+- (void)setUserCantGiveGDPRConsentWithStatus: (BOOL) status;
+
+- (BOOL)isInterstitialReadyToShow:(NSString *)tag;
+
+- (BOOL)isRewardedReadyToShow:(NSString *)tag;
+
+- (BOOL)isInterstitialReadyToShow;
+
+- (BOOL)isRewardedReadyToShow;
 
 @end
 

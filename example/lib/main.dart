@@ -15,8 +15,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    initScaleMonk();
     super.initState();
+    initScaleMonk();
   }
 
   Future initScaleMonk() async {
@@ -30,12 +30,9 @@ class _MyAppState extends State<MyApp> {
       print('Reward ad triggered the event $event');
     };
     initialize = await ScaleMonk.initialize(
-      // TODO: androidApplicationId
       androidApplicationId: 'sm-9999999-99999999',
-      // TODO: iosApplicationId
-      iosApplicationId: 'sm-0000000-00000000',
+      iosApplicationId: 'sm-test-app-scalemonk-6407705726',
     );
-    print('initialize = $initialize');
     setState(() {});
   }
 
@@ -71,26 +68,48 @@ class __BodyState extends State<_Body> {
           children: [
             Text('initialize = ${widget.initialize}'),
             RaisedButton(
-              child: Text('call setHasGDPRConsent'),
-              onPressed: () async {
-                await ScaleMonk.setHasGDPRConsent();
+              child: Text('call setHasGDPRConsentWithStatus'),
+              onPressed: () {
+                ScaleMonk.setHasGDPRConsentWithStatus(true);
               },
             ),
             RaisedButton(
               child: Text('call setIsApplicationChildDirected'),
-              onPressed: () async {
-                await ScaleMonk.setIsApplicationChildDirected();
+              onPressed: () {
+                ScaleMonk.setIsApplicationChildDirected(true);
               },
             ),
             RaisedButton(
-              child: Text('call setUserCantGiveGDPRConsent: true'),
+              child: Text('call setUserCantGiveGDPRConsentWithStatus'),
+              onPressed: () {
+                ScaleMonk.setUserCantGiveGDPRConsentWithStatus(true);
+              },
+            ),
+            RaisedButton(
+              child: Text('requestTrackingAuthorization'),
               onPressed: () async {
-                await ScaleMonk.setUserCantGiveGDPRConsent(hasConsent: true);
+                final dyn = await ScaleMonk.requestTrackingAuthorization();
+                print('dyn = $dyn');
+              },
+            ),
+            RaisedButton(
+              child: Text('isRewardedReadyToShow'),
+              onPressed: () async {
+                final dyn =
+                    await ScaleMonk.isRewardedReadyToShow(andTag: 'andTag');
+                print('isRewardedReadyToShow = $dyn');
               },
             ),
             _showAd('Banner', AdType.banner),
             _showAd('Interstitial', AdType.interstitial),
             _showAd('Reward', AdType.reward),
+            RaisedButton(
+              child: Text('stopLoadingBanners'),
+              onPressed: () {
+                ScaleMonk.stopLoadingBanners();
+              },
+            ),
+            SizedBox(height: 50),
           ],
         ),
       ),
@@ -100,9 +119,8 @@ class __BodyState extends State<_Body> {
   RaisedButton _showAd(String name, AdType type) {
     return RaisedButton(
       child: Text('Show $name Ad'),
-      onPressed: () async {
-        var status = await ScaleMonk.show(AdType.reward, tag: 'tag-example');
-        print('$name Ad, show = $status');
+      onPressed: () {
+        ScaleMonk.show(type, andTag: 'andTag');
       },
     );
   }

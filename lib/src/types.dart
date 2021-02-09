@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 AdType adTypeFromString(String st) =>
     _stringToEnum(st: st, values: AdType.values) as AdType;
 
@@ -63,16 +65,11 @@ enum BannerAdEvent {
   completed,
 }
 
-dynamic _stringToEnum({required String st, required List<dynamic> values}) {
-  String aux = st;
-  for (var i = 1; i < aux.length; i++) {
-    if (aux[i] == aux[i].toUpperCase()) {
-      aux = '${aux[0].toLowerCase()}${aux.substring(1)}';
-      i++;
-    }
-  }
-  final String enumType = aux.substring(0, aux.indexOf('.') + 1);
-  final String strRes = '$enumType$aux';
+dynamic _stringToEnum({@required String st, @required List<dynamic> values}) {
+  final fixed = st = st[0].toLowerCase() + st.substring(1);
+  final first = values.first.toString();
+  final String enumType = first.substring(0, first.indexOf('.') + 1);
+  final String strRes = '$enumType$fixed';
   final enumRes =
       values.firstWhere((e) => e.toString() == strRes, orElse: () => null);
   return enumRes ?? values.first;

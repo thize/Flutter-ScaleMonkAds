@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/SMAds.h</key>
 		<data>
-		Tbhd6fUkDK2CnDTAjXnp/2msrhQ=
+		bUxytNhvG2DqrPLDLVQ/PqW60XA=
 		</data>
 		<key>Headers/SMAdsConstants.h</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>Headers/ScaleMonkAds-Swift.h</key>
 		<data>
-		ZETeVW8e6hVkQRMdNV0OArqQMTc=
+		1AD1PpxNnLt0G73w6RxfNQ71kSo=
 		</data>
 		<key>Headers/ScaleMonkAds.h</key>
 		<data>
@@ -314,27 +314,27 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kjikQXIVJihIbpuQRON6izzQAqk=
+		eJH5okjhlyuYcM9jKHWboGC9AC4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TkRpNFWyJS7+hMonK+FLPygxNF4=
+		GT031YHTQP4tJ3wP1pONpKu6FeU=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oxBRWJeN0idXo55TqDlT2zOkaFc=
+		F0RO+Jx1Pg4qaE+sUFywPDpmq9w=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		kjikQXIVJihIbpuQRON6izzQAqk=
+		eJH5okjhlyuYcM9jKHWboGC9AC4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		TkRpNFWyJS7+hMonK+FLPygxNF4=
+		GT031YHTQP4tJ3wP1pONpKu6FeU=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		oxBRWJeN0idXo55TqDlT2zOkaFc=
+		F0RO+Jx1Pg4qaE+sUFywPDpmq9w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -842,11 +842,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tbhd6fUkDK2CnDTAjXnp/2msrhQ=
+			bUxytNhvG2DqrPLDLVQ/PqW60XA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NKO2R/1RHHs7MtdD/Vf5WZJ4J4jYSDDvCkytNYl1maw=
+			VSOycd48SUArAK2ghHrXpKZBSzJ27av5HJcZyqRy4+c=
 			</data>
 		</dict>
 		<key>Headers/SMAdsConstants.h</key>
@@ -1161,11 +1161,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZETeVW8e6hVkQRMdNV0OArqQMTc=
+			1AD1PpxNnLt0G73w6RxfNQ71kSo=
 			</data>
 			<key>hash2</key>
 			<data>
-			R8HUnmXqjXBbEApg+HeUi4DTraEJr9epCOx3tT3BcP0=
+			fIT63sMUHUcakW7ObJdp2gOH5dwJjlkneMuwzv6n3cc=
 			</data>
 		</dict>
 		<key>Headers/ScaleMonkAds.h</key>
@@ -1183,66 +1183,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kjikQXIVJihIbpuQRON6izzQAqk=
+			eJH5okjhlyuYcM9jKHWboGC9AC4=
 			</data>
 			<key>hash2</key>
 			<data>
-			JIW32bwQEWOKkQCt4radmi8/BpBXK8wl7nhNBuMOmvU=
+			OOXNxjAwH6ShcPa4E/++WGh4kPgPOYOtb/YKVLNELNs=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TkRpNFWyJS7+hMonK+FLPygxNF4=
+			GT031YHTQP4tJ3wP1pONpKu6FeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			hIWjyHLpKnAwh69khapquOwtiFOPn0qI6n/KapMCl9M=
+			2DqoIyGTqxwmrQYWGJC+3QdAyIW1oVFbX8q5gVR1PEc=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oxBRWJeN0idXo55TqDlT2zOkaFc=
+			F0RO+Jx1Pg4qaE+sUFywPDpmq9w=
 			</data>
 			<key>hash2</key>
 			<data>
-			0obVK6Fqb9NKEFDkTXFH8Xf6V6Sl/FCIT+bK0UCJRiU=
+			UJzC/hViNKfA1HvjlWfp/+wdKtlG9GmuU5O3HV+kbPs=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kjikQXIVJihIbpuQRON6izzQAqk=
+			eJH5okjhlyuYcM9jKHWboGC9AC4=
 			</data>
 			<key>hash2</key>
 			<data>
-			JIW32bwQEWOKkQCt4radmi8/BpBXK8wl7nhNBuMOmvU=
+			OOXNxjAwH6ShcPa4E/++WGh4kPgPOYOtb/YKVLNELNs=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TkRpNFWyJS7+hMonK+FLPygxNF4=
+			GT031YHTQP4tJ3wP1pONpKu6FeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			hIWjyHLpKnAwh69khapquOwtiFOPn0qI6n/KapMCl9M=
+			2DqoIyGTqxwmrQYWGJC+3QdAyIW1oVFbX8q5gVR1PEc=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oxBRWJeN0idXo55TqDlT2zOkaFc=
+			F0RO+Jx1Pg4qaE+sUFywPDpmq9w=
 			</data>
 			<key>hash2</key>
 			<data>
-			0obVK6Fqb9NKEFDkTXFH8Xf6V6Sl/FCIT+bK0UCJRiU=
+			UJzC/hViNKfA1HvjlWfp/+wdKtlG9GmuU5O3HV+kbPs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

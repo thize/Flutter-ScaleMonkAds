@@ -4,19 +4,22 @@ import 'package:flutter/services.dart';
 import 'package:scale_monk/scale_monk.dart';
 
 class ScaleMonk {
-  static String? _androidApplicationId;
-  static String? _iosApplicationId;
-  static Function(BannerAdEvent)? _bannerAdEventListener;
-  static Function(InterstitialAdEvent)? _interstitialAdEventListener;
-  static Function(RewardedVideoAdEvent)? _rewardAdEventListener;
+  static String _androidApplicationId;
+  static String _iosApplicationId;
+  static Function(BannerAdEvent) _bannerAdEventListener;
+  static Function(InterstitialAdEvent) _interstitialAdEventListener;
+  static Function(RewardedVideoAdEvent) _rewardAdEventListener;
 
   static const MethodChannel _channel = MethodChannel('scale_monk');
 
   //! ScaleMonk
 
-  /// Initialize the ScaleMonk plugin.
+  /// ScaleMonkAds uses your unique applicationId to
+  /// identify your app. To obtain this id, go to the
+  /// ScaleMonk Dashboard, in the menu select Manage > Applications
+  /// and copy the application id of your app.
   static Future<bool> initialize(
-      {String? androidApplicationId, String? iosApplicationId}) async {
+      {String androidApplicationId, String iosApplicationId}) async {
     _androidApplicationId = androidApplicationId;
     _iosApplicationId = iosApplicationId;
     assert(_androidApplicationId != null || _iosApplicationId != null,
@@ -25,10 +28,10 @@ class ScaleMonk {
     // Register the callbacks
     _setCallbacks();
 
-    return await _channel.invokeMethod('initialize', {
+    return _channel.invokeMethod('initialize', {
       'androidApplicationId': _androidApplicationId,
       'iosApplicationId': _iosApplicationId,
-    }) as Future<bool>;
+    });
   }
 
   /// Shows an ad of certain type [adType].
@@ -36,19 +39,26 @@ class ScaleMonk {
   /// Use the constants in the class `AdType` to specify what ad should be shown.
   ///
   /// Returns `true` if the ad is shown.
-  static Future<bool> show(AdType adType, {String? tag}) async {
+  static void show(AdType adType, {String andTag}) {
     assert(_androidApplicationId != null || _iosApplicationId != null,
         'You must set at least one of the keys for Android or iOS');
-
-    return await _channel.invokeMethod('show', {
+    _channel.invokeMethod('show', {
       'adType': adType.index,
-      'tag': tag,
-    }) as Future<bool>;
+      'andTag': andTag,
+    });
+  }
+
+  /// You'll likely want to check availability before offering
+  /// the user the possibility of seeing an ad to get a reward using this method
+  static Future<bool> isRewardedReadyToShow({String andTag}) async {
+    return _channel.invokeMethod('isRewardedReadyToShow', {
+      'andTag': andTag,
+    });
   }
 
   /// This removes the current `Banner` and stop loading more banners.
-  static Future<bool> stopLoadingBanners() async {
-    return await _channel.invokeMethod('stopLoadingBanners') as Future<bool>;
+  static void stopLoadingBanners() {
+    _channel.invokeMethod('stopLoadingBanners');
   }
 
   /// In order to facilitate compliance with General Data Protection Regulation (GDPR),
@@ -58,17 +68,19 @@ class ScaleMonk {
   /// By sending YES user accepts to share information to receive
   /// tarheted ads. By sending NO user accepts to share information
   /// to receive tarheted ads.
-  static Future setHasGDPRConsent() async {
-    return _channel.invokeMethod('setHasGDPRConsent');
+  static void setHasGDPRConsentWithStatus(bool value) {
+    _channel.invokeMethod('setHasGDPRConsentWithStatus', {
+      'value': value,
+    });
   }
 
   /// If the user is under age of consent call this method with [YES],
   /// otherwise you can call this method with false. If you dont call
   /// this method we assume the user is not under age of consent and
   /// you have to send whether the user accpeted or not the consent
-  static Future setUserCantGiveGDPRConsent({required bool hasConsent}) async {
-    return _channel.invokeMethod('setUserCantGiveGDPRConsent', {
-      'hasConsent': hasConsent,
+  static void setUserCantGiveGDPRConsentWithStatus(bool value) {
+    _channel.invokeMethod('setUserCantGiveGDPRConsentWithStatus', {
+      'value': value,
     });
   }
 
@@ -80,16 +92,21 @@ class ScaleMonk {
   /// If you call this method with [YES], you are indicating that your app
   /// should be treated as child-directed for purposes of
   /// the `Children’s Online Privacy Protection Act (COPPA)`
-  static Future setIsApplicationChildDirected() async {
-    return _channel.invokeMethod('setIsApplicationChildDirected');
+  static void setIsApplicationChildDirected(bool value) {
+    _channel.invokeMethod('setIsApplicationChildDirected', {
+      'value': value,
+    });
+  }
+
+  //! Tracking Authorization
+  static Future<bool> requestTrackingAuthorization() async {
+    return _channel.invokeMethod('requestTrackingAuthorization');
   }
 
   //! Callbacks
 
   static void _setCallbacks() {
     _channel.setMethodCallHandler((call) {
-      //TODO: remover print no fim de tudo
-      print('_setCallbacks call.method = ${call.method}');
       if (call.method.startsWith('onBanner')) {
         _bannerAdEventListener?.call(
           bannerAdEventFromString(call.method.replaceFirst('onBanner', '')),

@@ -6,14 +6,14 @@
 //
 
 import Foundation
-// import ScaleMonkAds
+import ScaleMonkAds
 
-// extension SwiftScaleMonkPlugin: BannerEventListener {
-//     public func onBannerFailWithTag(_: String) {
-//         channel?.invokeMethod("onBannerFail", arguments: nil)
-//     }
+extension SwiftScaleMonkPlugin: SMBannerAdEventListener {
+    public func onBannerFail(_: String) {
+        channel?.invokeMethod("onBannerFail", arguments: nil)
+    }
     
-//     public func onBannerCompletedWithTag(_: String) {
-//         channel?.invokeMethod("onBannerCompleted", arguments: nil)
-//     }
-// }
+    public func onBannerCompleted(_: String) {
+        channel?.invokeMethod("onBannerCompleted", arguments: nil)
+    }
+}

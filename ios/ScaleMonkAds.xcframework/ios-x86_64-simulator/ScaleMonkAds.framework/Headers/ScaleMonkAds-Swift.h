@@ -322,8 +322,8 @@ SWIFT_CLASS("_TtC12ScaleMonkAds35RewardedVideoAdEventListenerWrapper")
 @class UIViewController;
 @class SMBannerView;
 
-SWIFT_CLASS("_TtC12ScaleMonkAds15ScaleMonkAdsSDK")
-@interface ScaleMonkAdsSDK : NSObject
+SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
+@interface ScaleMonkAds : NSObject
 /// \param applicationId The id defined on the <a href="http://example.net/">ScaleMonk back-office.</a>
 ///
 /// \param extraParameters <em>Do not use</em>: This map defines internal test modes and other functionality.
@@ -382,6 +382,10 @@ SWIFT_CLASS("_TtC12ScaleMonkAds15ScaleMonkAdsSDK")
 - (void)setUserCantGiveGDPRConsentWithStatus:(BOOL)status;
 /// Call this method <em>after</em> the user as granted consent or not. (GDPR).
 - (void)setHasGDPRConsentWithStatus:(BOOL)status;
+/// Tells if an interstitial is ready to be shown
+- (BOOL)isInterstitialReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
+/// Tells if a rewarded ad is ready to be shown
+- (BOOL)isRewardedReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

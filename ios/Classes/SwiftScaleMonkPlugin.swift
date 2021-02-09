@@ -1,11 +1,11 @@
 import Flutter
 import UIKit
 import ScaleMonkAds
+import AppTrackingTransparency
 
 public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     internal var channel: FlutterMethodChannel?
-    // var scaleMonkAds: ScaleMonkAds?
-    // var scaleMonkAds: AnyObject
+    var scaleMonkAds: SMAds? = nil
 
     public static func register(with registrar: FlutterPluginRegistrar) {
         let instance = SwiftScaleMonkPlugin()
@@ -19,10 +19,12 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         //! ScaleMonk
         case "initialize": initialize(call, result)
         case "show": show(call, result)
+        case "isRewardedReadyToShow": isRewardedReadyToShow(call, result)
         case "stopLoadingBanners": stopLoadingBanners(call, result)
-        case "setHasGDPRConsent": setHasGDPRConsent(call, result)
-        case "setUserCantGiveGDPRConsent": setUserCantGiveGDPRConsent(call, result)
+        case "setHasGDPRConsentWithStatus": setHasGDPRConsentWithStatus(call, result)
+        case "setUserCantGiveGDPRConsentWithStatus": setUserCantGiveGDPRConsentWithStatus(call, result)
         case "setIsApplicationChildDirected": setIsApplicationChildDirected(call, result)
+        case "requestTrackingAuthorization": requestTrackingAuthorization(call, result)
         default: result(FlutterMethodNotImplemented)
         }
     }
@@ -30,102 +32,89 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     //! ScaleMonk
 
     private func initialize(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // let args = call.arguments as! [String: Any]
-        // let applicationId = args["iosApplicationId"] as! String
+        let args = call.arguments as! [String: Any]
+        let applicationId = args["iosApplicationId"] as! String
+        scaleMonkAds = SMAds(applicationId)!
 
-        // // Registering callbacks
-        // setCallbacks()
-
-        // // initialize
-        // let scaleMonkAds = ScaleMonkAds(applicationId: applicationId)
-        // scaleMonkAds.initialize({ success in
-        //     result(success)
-        // })
+        // Registering callbacks
+        setCallbacks()
+        
+        // initialize
+        scaleMonkAds!.initialize { success in
+            result(success)
+        }
     }
 
     private func show(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // let args = call.arguments as! [String: Any]
-        // let adType = args["adType"] as! Int
-        // let tag = args["tag"] as? String
-        // let rootViewController = UIApplication.shared.keyWindow?.rootViewController
-        // switch adType {
-        // case 0: return scaleMonkAds.showBannerAd(viewController: rootViewController, tag: tag)
-        // case 1: return scaleMonkAds.showInterstitialAd(viewController: rootViewController, tag: tag)
-        // case 2: return scaleMonkAds.showRewardedVideoAd(viewController: rootViewController, tag: tag)
-        // default: return scaleMonkAds.showBannerAd(viewController: rootViewController, tag: tag)
-        // }
+        let args = call.arguments as! [String: Any]
+        let adType = args["adType"] as! Int
+        let andTag = args["andTag"] as? String ?? ""
+        let controller = UIApplication.shared.keyWindow?.rootViewController
+        switch adType {
+        case 0:
+            let bannerView = SMBannerView()
+            bannerView.viewController = controller
+            let left = ((controller?.view.bounds.width ?? 320) - 320) / 2
+            let top = (controller?.view.bounds.height ?? 50) - 50
+            bannerView.frame = CGRect(x: left, y: top, width: 320, height: 50)
+            controller!.view.addSubview(bannerView)
+            scaleMonkAds!.showBannerAd(with: controller, bannerView: bannerView, andTag: andTag)
+        case 1: scaleMonkAds!.showInterstitialAd(with: controller, andTag: andTag)
+        case 2: scaleMonkAds!.showRewardedVideoAd(with: controller, andTag: andTag)
+        default: result(nil)
+        }
+        result(nil)
     }
 
     private func stopLoadingBanners(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // scaleMonkAds.stopLoadingBanners()
-        // result(nil)
+        scaleMonkAds!.stopLoadingBanners()
+        result(nil)
     }
 
-    private func setHasGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // scaleMonkAds.setHasGDPRConsent(status in result(status))
+    private func setHasGDPRConsentWithStatus(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+        let args = call.arguments as! [String: Any]
+        let value = args["value"] as! Bool
+        scaleMonkAds!.setHasGDPRConsentWithStatus(value)
+        result(nil)
     }
 
-    private func setUserCantGiveGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // let args = call.arguments as! [String: Any]
-        // let hasConsent = args["hasConsent"] as! Bool
-        // scaleMonkAds.setUserCanGiveGDPRConsent(hasConsent)
-        // result(nil)
+    private func setUserCantGiveGDPRConsentWithStatus(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+        let args = call.arguments as! [String: Any]
+        let value = args["value"] as! Bool
+        scaleMonkAds!.setUserCantGiveGDPRConsentWithStatus(value)
+        result(nil)
     }
 
     private func setIsApplicationChildDirected(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        // scaleMonkAds.setIsApplicationChildDirected(status in result(status))
+        let args = call.arguments as! [String: Any]
+        let value = args["value"] as! Bool
+        scaleMonkAds!.setIsApplicationChildDirected(value)
+        result(nil)
+    }
+
+    private func isRewardedReadyToShow(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+        let args = call.arguments as! [String: Any]
+        let andTag = args["andTag"] as? String ?? ""
+        result(scaleMonkAds!.isRewardedReady(toShow: andTag))
     }
 
     private func setCallbacks() {
-        // scaleMonkAds.addVideoListener(listener: self)
-        // scaleMonkAds.addInterstitialListener(listener: self)
-        // scaleMonkAds.addBannerListener(listener: self)
+        scaleMonkAds!.addVideoListener(self)
+        scaleMonkAds!.addInterstitialListener(self)
+        scaleMonkAds!.addBannerListener(self)
     }
-    
-    //! Consent Manager
-    
-    // private func fetchConsentInfo(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-    //     let args = call.arguments as! [String: Any]
-    //     let applicationId = args["iosApplicationId"] as! String
 
-    //     STKConsentManager.shared().synchronize(withAppKey: applicationId) { error in
-    //         if error == nil {
-    //             result([
-    //                 "acceptedVendors": [],
-    //                 "status": STKConsentManager.shared().consentStatus.rawValue,
-    //                 "zone": STKConsentManager.shared().regulation.rawValue,
-    //             ])
-    //         } else {
-    //             result(FlutterError(code: "CONSENT_INFO_ERROR", message: "Failed to fetch the consent info",
-    //                                 details: error))
-    //         }
-    //     }
-    // }
-    
-    // private func shouldShowConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-    //     let args = call.arguments as! [String: Any]
-    //     let applicationId = args["iosApplicationId"] as! String
-        
-    //     STKConsentManager.shared().synchronize(withAppKey: applicationId) { error in
-    //         if error == nil {
-    //             result(STKConsentManager.shared().shouldShowConsentDialog == .true)
-    //         } else {
-    //             result(FlutterError(code: "CONSENT_CHECK_ERROR", message: "Failed to check if consent is needed",
-    //                                 details: error))
-    //         }
-    //     }
-    // }
-    
-    // private func requestConsentAuthorization(_ result: @escaping FlutterResult) {
-    //     STKConsentManager.shared().loadConsentDialog { error in
-    //         if error == nil {
-    //             let controller = UIApplication.shared.keyWindow?.rootViewController
-    //             STKConsentManager.shared().showConsentDialog(fromRootViewController: controller!, delegate: nil)
-    //             result(nil)
-    //         } else {
-    //             result(FlutterError(code: "CONSENT_WINDOW_ERROR", message: "Error showing the consent window",
-    //                                 details: error))
-    //         }
-    //     }
-    // }
+    //! Tracking Authorization
+
+    private func requestTrackingAuthorization(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+        if #available(iOS 14, *) {
+			ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+				print("Tracking authorization completed. \(status)")
+				result(status == ATTrackingManager.AuthorizationStatus.authorized)
+			})
+		}
+		else {
+			result(true)
+		}
+    }
 }

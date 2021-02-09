@@ -6,34 +6,30 @@
 //
 
 import Foundation
-// import ScaleMonkAds
+import ScaleMonkAds
 
-// extension SwiftScaleMonkPlugin: RewardedVideoAdEventListener {
-//     public func onRewardedClickWithTag(_: String) {
-//         channel?.invokeMethod("onRewardedClick", arguments: nil)
-//     }
+extension SwiftScaleMonkPlugin: SMRewardedVideoAdEventListener {
+    public func onRewardedClick(_ tag: String!) {
+        channel?.invokeMethod("onRewardedClick", arguments: nil)
+    }
     
-//     public func onRewardedViewStartWithTag(_: String) {
-//         channel?.invokeMethod("onRewardedViewStart", arguments: nil)
-//     }
+    public func onRewardedViewStart(_ tag: String!) {
+        channel?.invokeMethod("onRewardedViewStart", arguments: nil)
+    }
 
-//     public func onRewardedFinishWithNoRewardWithTag(_: String) {
-//         channel?.invokeMethod("onRewardedFinishWithNoReward", arguments: nil)
-//     }
+    public func onRewardedFinishWithNoReward(_ tag: String) {
+        channel?.invokeMethod("onRewardedFinishWithNoReward", arguments: nil)
+    }
 
-//     public func onRewardedFinishWithRewardWithTag(_: String) {
-//         channel?.invokeMethod("onRewardedFinishWithReward", arguments: nil)
-//     }
+    public func onRewardedFinish(withReward tag: String!) {
+        channel?.invokeMethod("onRewardedFinishWithReward", arguments: nil)
+    }
+ 
+    public func onRewardedFail(_ tag: String!) {
+        channel?.invokeMethod("onRewardedFail", arguments: nil)
+    }
 
-//     public func onRewardedFailWithTag(_: String) {
-//         channel?.invokeMethod("onRewardedFail", arguments: nil)
-//     }
-
-//     public func onRewardedReady() {
-//         channel?.invokeMethod("onRewardedReady", arguments: nil)
-//     }
-
-//     public func onRewardedNotReady() {
-//         channel?.invokeMethod("onRewardedNotReady", arguments: nil)
-//     }
-// }
+    public func onRewardedReady() {
+        channel?.invokeMethod("onRewardedReady", arguments: nil)
+    }
+}
