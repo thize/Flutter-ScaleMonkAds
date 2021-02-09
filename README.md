@@ -13,7 +13,7 @@ A Flutter plugin to display ads from ScaleMonk. It currently supports __Banner__
 
 ```yaml
 dependencies:
-  scale_monk_ads: any
+  scale_monk: any
 ```
 
 2. Install the plugin by running the command below in the terminal, in your project's root directory:
