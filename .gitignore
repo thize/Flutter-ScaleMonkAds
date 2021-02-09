@@ -1,0 +1,9 @@
+.packages
+.dart_tool/
+example/.fvm/flutter_sdk
+
+example/.fvm/fvm_config.json
+
+pubspec.lock
+
+*.lock

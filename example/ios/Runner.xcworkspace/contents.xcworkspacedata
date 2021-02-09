@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:/Users/giovani/Desktop/Flutter/Flutter-ScaleMonkAds/example/ios/Pods/ScaleMonkAds.xcframework"
+      name = "ScaleMonkAds.xcframework">
+      <Group
+         location = "group:ios-x86_64-simulator"
+         name = "ios-x86_64-simulator">
+         <Group
+            location = "group:ScaleMonkAds.framework"
+            name = "ScaleMonkAds.framework">
+            <Group
+               location = "group:_CodeSignature"
+               name = "_CodeSignature">
+               <FileRef
+                  location = "group:CodeResources">
+               </FileRef>
+               <FileRef
+                  location = "group:CodeDirectory">
+               </FileRef>
+               <FileRef
+                  location = "group:CodeRequirements-1">
+               </FileRef>
+               <FileRef
+                  location = "group:CodeSignature">
+               </FileRef>
+               <FileRef
+                  location = "group:CodeRequirements">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Headers"
+               name = "Headers">
+               <FileRef
+                  location = "group:SMFacebookProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMInterstitialAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMMonitoringReachability.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinInterstitialDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMWaterfallEntry.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMInterstitialProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdMobProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ScaleMonkAds.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMIronSourceProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMVungleProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBuggyProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMApplovinAdloadDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:AuctionProviderProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMISDemandOnlyRewardedVideoDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMVideoProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMISDemandOnlyInterstitialDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAds.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMUnityAdsProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProviderProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProvidersSetup.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerViewProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ExecuteWithObjCExceptionHandling.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdsConstants.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMRTBWaterfallEntry.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMRewardedVideoAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProviderCallbacks.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinVideoDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ScaleMonkAds-Swift.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAnalyticsListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdsRTBLoggerProtocol.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:AppLovinSDKResources.bundle">
+            </FileRef>
+            <FileRef
+               location = "group:ScaleMonkAds">
+            </FileRef>
+            <Group
+               location = "group:Modules"
+               name = "Modules">
+               <FileRef
+                  location = "group:module.modulemap">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+      <Group
+         location = "group:ios-arm64_armv7"
+         name = "ios-arm64_armv7">
+         <Group
+            location = "group:ScaleMonkAds.framework"
+            name = "ScaleMonkAds.framework">
+            <Group
+               location = "group:Headers"
+               name = "Headers">
+               <FileRef
+                  location = "group:SMFacebookProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMInterstitialAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMMonitoringReachability.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinInterstitialDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMWaterfallEntry.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMInterstitialProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdMobProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ScaleMonkAds.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMIronSourceProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMVungleProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBuggyProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMApplovinAdloadDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:AuctionProviderProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMISDemandOnlyRewardedVideoDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMVideoProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMISDemandOnlyInterstitialDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAds.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMUnityAdsProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProviderProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProvidersSetup.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerViewProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ExecuteWithObjCExceptionHandling.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdsConstants.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMBannerProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMRTBWaterfallEntry.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMRewardedVideoAdEventListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMProviderCallbacks.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinVideoDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:ScaleMonkAds-Swift.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAnalyticsListener.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAppLovinProvider.h">
+               </FileRef>
+               <FileRef
+                  location = "group:SMAdsRTBLoggerProtocol.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:AppLovinSDKResources.bundle">
+            </FileRef>
+            <FileRef
+               location = "group:ScaleMonkAds">
+            </FileRef>
+            <Group
+               location = "group:Modules"
+               name = "Modules">
+               <FileRef
+                  location = "group:module.modulemap">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Runner.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

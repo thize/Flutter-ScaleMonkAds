@@ -1,0 +1,6 @@
+framework module SMDeviceInfo {
+  umbrella header "SMDeviceInfo.h"
+
+  export *
+  module * { export * }
+}
