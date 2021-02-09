@@ -114,9 +114,9 @@ After you collect all the permissions and the plugin properly initialized, you a
 To show an banner, interstitial or reward ad, call the function `ScaleMonk.show()` passing the type of ad that you would like to show as a paremeter (mandatory) and the Tag (optional)
 
 ```dart
-ScaleMonk.show(AdType.banner, andTag: "optional-tag");
-ScaleMonk.show(AdType.interstitial, andTag: "optional-tag");
-ScaleMonk.show(AdType.reward, andTag: "optional-tag");
+ScaleMonk.show(AdType.banner, tag: "optional-tag");
+ScaleMonk.show(AdType.interstitial, tag: "optional-tag");
+ScaleMonk.show(AdType.reward, tag: "optional-tag");
 ```
 
 ### Close Banner
@@ -131,7 +131,7 @@ You'll likely want to check availability before offering the user the possibilit
 Note that the rewarded video caching doesn't depend on a specific tag so this parameter is optional.
 
 ```dart
-ScaleMonk.isRewardedReadyToShow(andTag: "optional-tag");
+ScaleMonk.isRewardedReadyToShow(tag: "optional-tag");
 ```
 
 ## ♻️ Callbacks

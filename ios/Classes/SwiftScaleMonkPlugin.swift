@@ -21,8 +21,8 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         case "show": show(call, result)
         case "isRewardedReadyToShow": isRewardedReadyToShow(call, result)
         case "stopLoadingBanners": stopLoadingBanners(call, result)
-        case "setHasGDPRConsentWithStatus": setHasGDPRConsentWithStatus(call, result)
-        case "setUserCantGiveGDPRConsentWithStatus": setUserCantGiveGDPRConsentWithStatus(call, result)
+        case "setHasGDPRConsent": setHasGDPRConsent(call, result)
+        case "setUserCantGiveGDPRConsent": setUserCantGiveGDPRConsent(call, result)
         case "setIsApplicationChildDirected": setIsApplicationChildDirected(call, result)
         case "requestTrackingAuthorization": requestTrackingAuthorization(call, result)
         default: result(FlutterMethodNotImplemented)
@@ -48,7 +48,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     private func show(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         let args = call.arguments as! [String: Any]
         let adType = args["adType"] as! Int
-        let andTag = args["andTag"] as? String ?? ""
+        let tag = args["tag"] as? String ?? ""
         let controller = UIApplication.shared.keyWindow?.rootViewController
         switch adType {
         case 0:
@@ -58,9 +58,9 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
             let top = (controller?.view.bounds.height ?? 50) - 50
             bannerView.frame = CGRect(x: left, y: top, width: 320, height: 50)
             controller!.view.addSubview(bannerView)
-            scaleMonkAds!.showBannerAd(with: controller, bannerView: bannerView, andTag: andTag)
-        case 1: scaleMonkAds!.showInterstitialAd(with: controller, andTag: andTag)
-        case 2: scaleMonkAds!.showRewardedVideoAd(with: controller, andTag: andTag)
+            scaleMonkAds!.showBannerAd(viewController: controller, bannerView: bannerView, tag: tag)
+        case 1: scaleMonkAds!.showInterstitialAd(viewController: controller, tag: tag)
+        case 2: scaleMonkAds!.showRewardedVideoAd(viewController: controller, tag: tag)
         default: result(nil)
         }
         result(nil)
@@ -71,17 +71,17 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
         result(nil)
     }
 
-    private func setHasGDPRConsentWithStatus(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+    private func setHasGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         let args = call.arguments as! [String: Any]
-        let value = args["value"] as! Bool
-        scaleMonkAds!.setHasGDPRConsentWithStatus(value)
+        let status = args["status"] as! Bool
+        scaleMonkAds!.setHasGDPRConsent(status: status)
         result(nil)
     }
 
-    private func setUserCantGiveGDPRConsentWithStatus(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
+    private func setUserCantGiveGDPRConsent(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         let args = call.arguments as! [String: Any]
-        let value = args["value"] as! Bool
-        scaleMonkAds!.setUserCantGiveGDPRConsentWithStatus(value)
+        let status = args["status"] as! Bool
+        scaleMonkAds!.setUserCantGiveGDPRConsent(status: status)
         result(nil)
     }
 
@@ -94,8 +94,8 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
 
     private func isRewardedReadyToShow(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         let args = call.arguments as! [String: Any]
-        let andTag = args["andTag"] as? String ?? ""
-        result(scaleMonkAds!.isRewardedReady(toShow: andTag))
+        let tag = args["tag"] as? String ?? ""
+        result(scaleMonkAds!.isRewardedReadyToShow(tag: tag))
     }
 
     private func setCallbacks() {
