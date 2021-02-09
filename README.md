@@ -94,7 +94,13 @@ To comply with General Data Protection Regulation (GDPR) you'll have to provide 
 By sending true the user accepts to share information to receive targeted ads. By sending false the user doesn't give consent to receive targeted ads.
 
 ```dart
-ScaleMonk.setHasGDPRConsentWithStatus(Bool)
+ScaleMonk.setHasGDPRConsent(status: Bool)
+```
+
+If the user is under the age of consent call this method with YES, otherwise you can call this method using false.\
+If you don't call this method we assume the user is not under the age of consent and you have to send whether the user accepted or not the consent
+```dart
+ScaleMonk.setUserCantGiveGDPRConsent(status: Bool)
 ```
 
 ## COPPA: Child Directed Treatment
