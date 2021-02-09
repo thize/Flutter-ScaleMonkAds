@@ -125,8 +125,8 @@ ScaleMonk.stopLoadingBanners();
 
 ### Checking if the rewarded video is ready to be shown
 
-You'll likely want to check availability before offering the user the possibility of seeing an ad to get a reward using this method:
-\Note that the rewarded video caching doesn't depend on a specific tag so this parameter is optional.
+You'll likely want to check availability before offering the user the possibility of seeing an ad to get a reward using this method:\
+Note that the rewarded video caching doesn't depend on a specific tag so this parameter is optional.
 
 ```dart
 ScaleMonk.isRewardedReadyToShow(andTag: "optional-tag");
