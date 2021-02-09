@@ -22,8 +22,8 @@ $ flutter pub get
 
 ### iOS
 
-Admob 7.42.0 requires the App ID to be included in `Info.plist`. Failure to do so will result in a crash on launch of your app. 
-\The lines should look like:
+Admob 7.42.0 requires the App ID to be included in `Info.plist`. Failure to do so will result in a crash on launch of your app.\
+The lines should look like:
 ```xml
 <key>GADApplicationIdentifier</key>
 <string>[ADMOB_APP_ID]</string>
