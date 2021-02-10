@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'scale_monk'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'A Flutter plugin to display ads from ScaleMonk.'
   s.description      = <<-DESC
 A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS 14+ and GDPR/CCPA consent.
@@ -34,10 +34,10 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'Willow', '~> 5.0'
   
-  s.dependency 'Google-Mobile-Ads-SDK', '7.68.0'
-  s.dependency 'AppLovinSDK', '6.14.5'
-  s.dependency 'FBAudienceNetwork', '6.2.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
+  s.dependency 'AppLovinSDK', '6.15.1'
+  s.dependency 'FBAudienceNetwork', '6.2.1'
   s.dependency 'IronSourceSDK', '7.0.3.0'
   s.dependency 'UnityAds', '3.5.1'
-  s.dependency 'VungleSDK-iOS', '6.8.0'
+  s.dependency 'VungleSDK-iOS', '6.8.1'
 end
