@@ -1,4 +1,4 @@
-# ScaleMonk Ads
+# [ScaleMonk Ads](https://scalemonk.github.io/mediation-docs/#/)**
 
 [![Pub Version](https://img.shields.io/pub/v/scalemonk?color=blue)](https://pub.dev/packages/scale_monk)
 [![ISC License](https://img.shields.io/npm/l/vimdb?color=important)](LICENSE)
@@ -8,6 +8,8 @@ A Flutter plugin to display ads from ScaleMonk. It currently supports __Banner__
 **Note: Currently only iOS platform is supported.**
 
 ## ⚙️ Installation
+
+**[ScaleMonk Docs](https://scalemonk.github.io/mediation-docs/#/)**
 
 1. Add the dependency to the `pubspec.yaml` file in your project:
 
