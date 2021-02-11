@@ -1,4 +1,4 @@
-# [ScaleMonk Ads](https://scalemonk.github.io/mediation-docs/#/)**
+# [ScaleMonk Ads](https://scalemonk.github.io/mediation-docs/#/)
 
 [![Pub Version](https://img.shields.io/pub/v/scalemonk?color=blue)](https://pub.dev/packages/scale_monk)
 [![ISC License](https://img.shields.io/npm/l/vimdb?color=important)](LICENSE)
