@@ -1,3 +1,3 @@
-## 0.2.0
+## 0.4.0
 
-* Initial release ScaleMonkAds (0.2.0) with support for Banner, Interstitital and Reward ads.
+* Initial release ScaleMonkAds (0.4.0) with support for Banner, Interstitital and Reward ads.
