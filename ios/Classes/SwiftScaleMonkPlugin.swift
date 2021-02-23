@@ -55,7 +55,11 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
             let bannerView = SMBannerView()
             bannerView.viewController = controller
             let left = ((controller?.view.bounds.width ?? 320) - 320) / 2
-            let top = (controller?.view.bounds.height ?? 50) - 50
+            var top = (controller?.view.bounds.height ?? 50) - 50
+            if #available(iOS 11.0, *) {
+                let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0
+                top = top - bottomPadding
+            }
             bannerView.frame = CGRect(x: left, y: top, width: 320, height: 50)
             controller!.view.addSubview(bannerView)
             scaleMonkAds!.showBannerAd(viewController: controller, bannerView: bannerView, tag: tag)

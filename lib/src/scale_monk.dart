@@ -24,7 +24,7 @@ class ScaleMonk {
     _androidApplicationId = androidApplicationId;
     _iosApplicationId = iosApplicationId;
     assert(_androidApplicationId != null || _iosApplicationId != null,
-        'You must set at least one of the keys for Android or iOS');
+        "You must set at least one of the Id's for Android or iOS");
 
     // Register the callbacks
     _setCallbacks();
@@ -42,7 +42,7 @@ class ScaleMonk {
   /// Returns `true` if the ad is shown.
   static void show(AdType adType, {String tag}) {
     assert(_androidApplicationId != null || _iosApplicationId != null,
-        'You must set at least one of the keys for Android or iOS');
+        "You must set at least one of the Id's for Android or iOS");
     _channel.invokeMethod('show', {
       'adType': adType.index,
       'tag': tag,
