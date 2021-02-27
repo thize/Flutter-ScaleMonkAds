@@ -1,7 +1,7 @@
 name: scale_monk
 description: A Flutter plugin to display Ads from ScaleMonk
-version: 0.4.1+1
-homepage: https://github.com/thize/scale_monk
+version: 0.4.1+2
+homepage: https://github.com/thize/flutter_scale_monk
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
