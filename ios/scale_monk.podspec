@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'scale_monk'
-  s.version          = '0.4.1'
+  s.version          = '0.4.2'
   s.summary          = 'A Flutter plugin to display ads from ScaleMonk.'
   s.description      = <<-DESC
 A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS 14+ and GDPR/CCPA consent.
