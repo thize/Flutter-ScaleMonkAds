@@ -1,15 +1,14 @@
 library scale_monk;
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:scale_monk/scale_monk.dart';
 
 class ScaleMonk {
-  static String _androidApplicationId;
-  static String _iosApplicationId;
-  static Function(BannerAdEvent) _bannerAdEventListener;
-  static Function(InterstitialAdEvent) _interstitialAdEventListener;
-  static Function(RewardedVideoAdEvent) _rewardAdEventListener;
+  static String? _androidApplicationId;
+  static String? _iosApplicationId;
+  static Function(BannerAdEvent)? _bannerAdEventListener;
+  static Function(InterstitialAdEvent)? _interstitialAdEventListener;
+  static Function(RewardedVideoAdEvent)? _rewardAdEventListener;
 
   static const MethodChannel _channel = MethodChannel('scale_monk');
 
@@ -20,7 +19,7 @@ class ScaleMonk {
   /// ScaleMonk Dashboard, in the menu select Manage > Applications
   /// and copy the application id of your app.
   static Future<bool> initialize(
-      {String androidApplicationId, String iosApplicationId}) async {
+      {String? androidApplicationId, String? iosApplicationId}) async {
     _androidApplicationId = androidApplicationId;
     _iosApplicationId = iosApplicationId;
     assert(_androidApplicationId != null || _iosApplicationId != null,
@@ -32,7 +31,7 @@ class ScaleMonk {
     return _channel.invokeMethod('initialize', {
       'androidApplicationId': _androidApplicationId,
       'iosApplicationId': _iosApplicationId,
-    });
+    }) as Future<bool>;
   }
 
   /// Shows an ad of certain type [adType].
@@ -40,7 +39,7 @@ class ScaleMonk {
   /// Use the constants in the class `AdType` to specify what ad should be shown.
   ///
   /// Returns `true` if the ad is shown.
-  static void show(AdType adType, {String tag}) {
+  static void show(AdType adType, {String? tag}) {
     assert(_androidApplicationId != null || _iosApplicationId != null,
         "You must set at least one of the Id's for Android or iOS");
     _channel.invokeMethod('show', {
@@ -51,10 +50,10 @@ class ScaleMonk {
 
   /// You'll likely want to check availability before offering
   /// the user the possibility of seeing an ad to get a reward using this method
-  static Future<bool> isRewardedReadyToShow({String tag}) async {
+  static Future<bool> isRewardedReadyToShow({String? tag}) async {
     return _channel.invokeMethod('isRewardedReadyToShow', {
       'tag': tag,
-    });
+    }) as Future<bool>;
   }
 
   /// This removes the current `Banner` and stop loading more banners.
@@ -69,7 +68,7 @@ class ScaleMonk {
   /// By sending YES user accepts to share information to receive
   /// tarheted ads. By sending NO user accepts to share information
   /// to receive tarheted ads.
-  static void setHasGDPRConsent({@required bool status}) {
+  static void setHasGDPRConsent({required bool status}) {
     _channel.invokeMethod('setHasGDPRConsent', {
       'status': status,
     });
@@ -79,7 +78,7 @@ class ScaleMonk {
   /// otherwise you can call this method with false. If you dont call
   /// this method we assume the user is not under age of consent and
   /// you have to send whether the user accpeted or not the consent
-  static void setUserCantGiveGDPRConsent({@required bool status}) {
+  static void setUserCantGiveGDPRConsent({required bool status}) {
     _channel.invokeMethod('setUserCantGiveGDPRConsent', {
       'status': status,
     });
@@ -101,7 +100,8 @@ class ScaleMonk {
 
   //! Tracking Authorization
   static Future<bool> requestTrackingAuthorization() async {
-    return _channel.invokeMethod('requestTrackingAuthorization');
+    return _channel.invokeMethod('requestTrackingAuthorization')
+        as Future<bool>;
   }
 
   //! Callbacks

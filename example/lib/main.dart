@@ -67,32 +67,32 @@ class __BodyState extends State<_Body> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text('initialize = ${widget.initialize}'),
-            RaisedButton(
+            ElevatedButton(
               child: Text('call setHasGDPRConsent'),
               onPressed: () {
                 ScaleMonk.setHasGDPRConsent(status: true);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('call setUserCantGiveGDPRConsent'),
               onPressed: () {
                 ScaleMonk.setUserCantGiveGDPRConsent(status: false);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('call setIsApplicationChildDirected'),
               onPressed: () {
                 ScaleMonk.setIsApplicationChildDirected(true);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('requestTrackingAuthorization'),
               onPressed: () async {
                 final dyn = await ScaleMonk.requestTrackingAuthorization();
                 print('dyn = $dyn');
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('isRewardedReadyToShow'),
               onPressed: () async {
                 final dyn = await ScaleMonk.isRewardedReadyToShow(tag: 'tag');
@@ -102,7 +102,7 @@ class __BodyState extends State<_Body> {
             _showAd('Banner', AdType.banner),
             _showAd('Interstitial', AdType.interstitial),
             _showAd('Reward', AdType.reward),
-            RaisedButton(
+            ElevatedButton(
               child: Text('stopLoadingBanners'),
               onPressed: () {
                 ScaleMonk.stopLoadingBanners();
@@ -115,8 +115,8 @@ class __BodyState extends State<_Body> {
     );
   }
 
-  RaisedButton _showAd(String name, AdType type) {
-    return RaisedButton(
+  ElevatedButton _showAd(String name, AdType type) {
+    return ElevatedButton(
       child: Text('Show $name Ad'),
       onPressed: () {
         ScaleMonk.show(type, tag: 'tag');

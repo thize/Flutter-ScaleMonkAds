@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.4.2] - 2021-03-03
+- Migrate to null safety.
+
 ## [0.4.2] - 2021-03-01
 - Update [SDK to 0.4.2](https://github.com/scalemonk/mediation-sdk-ios-framework/blob/master/CHANGELOG.md#042---2021-03-01)
 
