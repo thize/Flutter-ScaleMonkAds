@@ -24,6 +24,35 @@ dependencies:
 $ flutter pub get
 ```
 
+### Android
+
+Change minSdkVersion to 19:
+
+```xml
+android {
+    ...
+    defaultConfig {
+        ...
+        minSdkVersion 19
+        ...
+    }
+}
+```
+
+```xml
+<manifest>
+    ...
+    <application>
+        ...
+        <meta-data android:name="com.scalemonk.libs.ads.applicationId" 
+                   android:value="[YOUR SM APP ID HERE]" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
+    </application>
+</manifest>
+```
+
 ### iOS
 
 Admob 7.42.0 requires the App ID to be included in `Info.plist`. Failure to do so will result in a crash on launch of your app.\

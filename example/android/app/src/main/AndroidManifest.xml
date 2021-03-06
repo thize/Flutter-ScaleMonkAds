@@ -37,5 +37,16 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- <meta-data android:name="com.scalemonk.libs.ads.applicationId" 
+                   android:value="[YOUR ID HERE]" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/> -->
+        <!-- <meta-data android:name="com.scalemonk.libs.ads.applicationId" 
+                   android:value="[YOUR ID HERE]" /> -->
+        <!-- <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/> -->
     </application>
 </manifest>

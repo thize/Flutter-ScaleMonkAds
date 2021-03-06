@@ -11,6 +11,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.7.2"
     }
 }
 
@@ -18,11 +19,15 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+        }
     }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+// apply plugin: 'com.jfrog.artifactory'
 
 android {
     compileSdkVersion 30
@@ -31,10 +36,11 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.scalemonk.libs:ads:+'
 }
