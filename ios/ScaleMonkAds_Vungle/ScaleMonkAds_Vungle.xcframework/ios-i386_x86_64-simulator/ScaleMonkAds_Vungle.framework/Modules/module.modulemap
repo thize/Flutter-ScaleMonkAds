@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Vungle {
+  umbrella header "ScaleMonkAds_Vungle.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Vungle.Swift {
+    header "ScaleMonkAds_Vungle-Swift.h"
+    requires objc
+}

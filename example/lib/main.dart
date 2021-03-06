@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     };
     initialize = await ScaleMonk.initialize(
       androidApplicationId: 'sm-9999999-99999999',
-      iosApplicationId: 'sm-test-app-scalemonk-6407705726',
+      iosApplicationId: 'sm-9498217944987982-3021189126',
     );
     setState(() {});
   }
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
 class _Body extends StatefulWidget {
   final bool initialize;
 
-  const _Body({Key key, @required this.initialize}) : super(key: key);
+  const _Body({Key? key, required this.initialize}) : super(key: key);
 
   @override
   __BodyState createState() => __BodyState();
@@ -88,15 +88,15 @@ class __BodyState extends State<_Body> {
             ElevatedButton(
               child: Text('requestTrackingAuthorization'),
               onPressed: () async {
-                final dyn = await ScaleMonk.requestTrackingAuthorization();
-                print('dyn = $dyn');
+                final res = await ScaleMonk.requestTrackingAuthorization();
+                print('requestTrackingAuthorization = $res');
               },
             ),
             ElevatedButton(
               child: Text('isRewardedReadyToShow'),
               onPressed: () async {
-                final dyn = await ScaleMonk.isRewardedReadyToShow(tag: 'tag');
-                print('isRewardedReadyToShow = $dyn');
+                final res = await ScaleMonk.isRewardedReadyToShow(tag: 'tag');
+                print('isRewardedReadyToShow = $res');
               },
             ),
             _showAd('Banner', AdType.banner),

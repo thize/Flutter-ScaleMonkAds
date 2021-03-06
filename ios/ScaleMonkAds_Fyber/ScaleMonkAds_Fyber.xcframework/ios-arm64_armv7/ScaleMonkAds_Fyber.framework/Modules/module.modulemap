@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Fyber {
+  umbrella header "ScaleMonkAds_Fyber.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Fyber.Swift {
+    header "ScaleMonkAds_Fyber-Swift.h"
+    requires objc
+}

@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Tapjoy {
+  umbrella header "ScaleMonkAds_Tapjoy.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Tapjoy.Swift {
+    header "ScaleMonkAds_Tapjoy-Swift.h"
+    requires objc
+}

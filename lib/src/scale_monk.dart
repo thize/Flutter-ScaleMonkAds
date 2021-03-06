@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:scale_monk/scale_monk.dart';
 
 class ScaleMonk {
-  static String? _androidApplicationId;
   static String? _iosApplicationId;
   static Function(BannerAdEvent)? _bannerAdEventListener;
   static Function(InterstitialAdEvent)? _interstitialAdEventListener;
@@ -20,18 +19,13 @@ class ScaleMonk {
   /// and copy the application id of your app.
   static Future<bool> initialize(
       {String? androidApplicationId, String? iosApplicationId}) async {
-    _androidApplicationId = androidApplicationId;
     _iosApplicationId = iosApplicationId;
-    assert(_androidApplicationId != null || _iosApplicationId != null,
-        "You must set at least one of the Id's for Android or iOS");
-
     // Register the callbacks
     _setCallbacks();
 
-    return _channel.invokeMethod('initialize', {
-      'androidApplicationId': _androidApplicationId,
+    return await _channel.invokeMethod('initialize', {
       'iosApplicationId': _iosApplicationId,
-    }) as Future<bool>;
+    }) as bool;
   }
 
   /// Shows an ad of certain type [adType].
@@ -40,8 +34,6 @@ class ScaleMonk {
   ///
   /// Returns `true` if the ad is shown.
   static void show(AdType adType, {String? tag}) {
-    assert(_androidApplicationId != null || _iosApplicationId != null,
-        "You must set at least one of the Id's for Android or iOS");
     _channel.invokeMethod('show', {
       'adType': adType.index,
       'tag': tag,
@@ -51,9 +43,9 @@ class ScaleMonk {
   /// You'll likely want to check availability before offering
   /// the user the possibility of seeing an ad to get a reward using this method
   static Future<bool> isRewardedReadyToShow({String? tag}) async {
-    return _channel.invokeMethod('isRewardedReadyToShow', {
+    return await _channel.invokeMethod('isRewardedReadyToShow', {
       'tag': tag,
-    }) as Future<bool>;
+    }) as bool;
   }
 
   /// This removes the current `Banner` and stop loading more banners.
@@ -100,8 +92,7 @@ class ScaleMonk {
 
   //! Tracking Authorization
   static Future<bool> requestTrackingAuthorization() async {
-    return _channel.invokeMethod('requestTrackingAuthorization')
-        as Future<bool>;
+    return await _channel.invokeMethod('requestTrackingAuthorization') as bool;
   }
 
   //! Callbacks

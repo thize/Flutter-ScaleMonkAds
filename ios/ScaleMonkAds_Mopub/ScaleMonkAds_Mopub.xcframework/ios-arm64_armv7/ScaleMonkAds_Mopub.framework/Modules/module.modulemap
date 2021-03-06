@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Mopub {
+  umbrella header "ScaleMonkAds_Mopub.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Mopub.Swift {
+    header "ScaleMonkAds_Mopub-Swift.h"
+    requires objc
+}

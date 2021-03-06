@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_InMobi {
+  umbrella header "ScaleMonkAds_InMobi.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_InMobi.Swift {
+    header "ScaleMonkAds_InMobi-Swift.h"
+    requires objc
+}

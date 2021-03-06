@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_AppLovinMediation {
+  umbrella header "ScaleMonkAds_AppLovinMediation.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_AppLovinMediation.Swift {
+    header "ScaleMonkAds_AppLovinMediation-Swift.h"
+    requires objc
+}

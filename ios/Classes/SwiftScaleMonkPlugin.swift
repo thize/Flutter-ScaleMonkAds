@@ -34,7 +34,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     private func initialize(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
         let args = call.arguments as! [String: Any]
         let applicationId = args["iosApplicationId"] as! String
-        scaleMonkAds = SMAds(applicationId)!
+        scaleMonkAds = SMAds(applicationId: applicationId)!
 
         // Registering callbacks
         setCallbacks()
@@ -64,7 +64,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
             controller!.view.addSubview(bannerView)
             scaleMonkAds!.showBannerAd(viewController: controller, bannerView: bannerView, tag: tag)
         case 1: scaleMonkAds!.showInterstitialAd(viewController: controller, tag: tag)
-        case 2: scaleMonkAds!.showRewardedVideoAd(viewController: controller, tag: tag)
+        case 2: scaleMonkAds!.showRewardedAd(viewController: controller, tag: tag)
         default: result(nil)
         }
         result(nil)
@@ -103,7 +103,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     }
 
     private func setCallbacks() {
-        scaleMonkAds!.addVideoListener(self)
+        // scaleMonkAds!.addVideoListener(self)
         scaleMonkAds!.addInterstitialListener(self)
         scaleMonkAds!.addBannerListener(self)
     }

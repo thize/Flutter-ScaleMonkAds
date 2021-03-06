@@ -8,7 +8,7 @@
 import Foundation
 import ScaleMonkAds
 
-extension SwiftScaleMonkPlugin: SMRewardedVideoAdEventListener {
+extension SwiftScaleMonkPlugin: SMRewardedAdEventListener {
     public func onRewardedClick(_ tag: String!) {
         channel?.invokeMethod("onRewardedClick", arguments: nil)
     }

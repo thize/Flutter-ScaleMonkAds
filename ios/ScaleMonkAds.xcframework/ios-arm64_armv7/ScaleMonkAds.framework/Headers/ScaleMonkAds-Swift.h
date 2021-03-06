@@ -214,8 +214,25 @@ SWIFT_PROTOCOL("_TtP12ScaleMonkAds8AdPolicy_")
 @end
 
 
+SWIFT_PROTOCOL("_TtP12ScaleMonkAds9Analytics_")
+@protocol Analytics
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+@end
+
+
 SWIFT_CLASS("_TtC12ScaleMonkAds24AnalyticsListenerWrapper")
-@interface AnalyticsListenerWrapper : NSObject
+@interface AnalyticsListenerWrapper : NSObject <Analytics>
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol SMWrapperAnalytics;
+
+SWIFT_CLASS("_TtC12ScaleMonkAds16AnalyticsWrapper")
+@interface AnalyticsWrapper : NSObject <Analytics>
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+- (nonnull instancetype)initFrom:(id <SMWrapperAnalytics> _Nonnull)from OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -303,11 +320,11 @@ SWIFT_PROTOCOL("_TtP12ScaleMonkAds28RewardedVideoAdEventListener_")
 - (void)onRewardedNotReady;
 @end
 
-@protocol SMRewardedVideoAdEventListener;
+@protocol SMRewardedAdEventListener;
 
 SWIFT_CLASS("_TtC12ScaleMonkAds35RewardedVideoAdEventListenerWrapper")
 @interface RewardedVideoAdEventListenerWrapper : NSObject <RewardedVideoAdEventListener>
-- (nonnull instancetype)initWithListener:(id <SMRewardedVideoAdEventListener> _Nonnull)listener OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithListener:(id <SMRewardedAdEventListener> _Nonnull)listener OBJC_DESIGNATED_INITIALIZER;
 - (void)onRewardedClickWithTag:(NSString * _Nonnull)tag;
 - (void)onRewardedFailWithTag:(NSString * _Nonnull)tag;
 - (void)onRewardedFinishWithNoRewardWithTag:(NSString * _Nonnull)tag;
@@ -323,14 +340,17 @@ SWIFT_CLASS("_TtC12ScaleMonkAds35RewardedVideoAdEventListenerWrapper")
 
 @class UIViewController;
 @class SMBannerView;
+@protocol SMSessionService;
+@protocol SMAnalyticsListener;
 
 SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 @interface ScaleMonkAds : NSObject
-/// \param applicationId The id defined on the <a href="http://example.net/">ScaleMonk back-office.</a>
+/// \param applicationId The id defined on the <a href="https://mediation.scalemonk.com/">ScaleMonk dashboard.</a>
 ///
-/// \param extraParameters <em>Do not use</em>: This map defines internal test modes and other functionality.
+/// \param customUserId custom id to identify a user in tracking. If not provided an internal id will be used.
 ///
-- (nonnull instancetype)initWithApplicationId:(NSString * _Nonnull)applicationId extraParameters:(NSDictionary<NSString *, id> * _Nullable)extraParameters OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithApplicationId:(NSString * _Nullable)applicationId customUserId:(NSString * _Nullable)customUserId analytics:(NSArray<id <Analytics>> * _Nonnull)analytics policies:(NSArray<id <AdPolicy>> * _Nonnull)policies OBJC_DESIGNATED_INITIALIZER;
+- (void)setExtraInfo:(NSDictionary<NSString *, id> * _Nonnull)extraInfo;
 /// This method initializes the SDK.
 /// note:
 /// Make sure to call this and wait for the <code>done</code> block before calling any other method.
@@ -375,7 +395,7 @@ SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 ///
 - (void)showBannerAdWithViewController:(UIViewController * _Nonnull)viewController bannerView:(SMBannerView * _Nonnull)bannerView tag:(NSString * _Nonnull)tag;
 /// This removes the current banner from the <code>SMBannerView</code> and stops loading more banners.
-- (void)stopLoadingBanners;
+- (void)stopLoadingBannersWithTag:(NSString * _Nonnull)tag;
 /// This tag the user as under age or not to complain with COPPA regulation
 /// \param childDirectedTreatment set true if the user is under age, otherwise false. If the age is not tagged we assume the user is not under age.
 ///
@@ -384,10 +404,18 @@ SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 - (void)setUserCantGiveGDPRConsentWithStatus:(BOOL)status;
 /// Call this method <em>after</em> the user as granted consent or not. (GDPR).
 - (void)setHasGDPRConsentWithStatus:(BOOL)status;
+/// Tells if interstitials ads are enabled for the current configuration
+- (BOOL)areInterstitialsEnabled SWIFT_WARN_UNUSED_RESULT;
+/// Tells if video ads are enabled for the current configuration
+- (BOOL)areVideosEnabled SWIFT_WARN_UNUSED_RESULT;
+/// Tells if banner ads are enabled for the current configuration
+- (BOOL)areBannersEnabled SWIFT_WARN_UNUSED_RESULT;
 /// Tells if an interstitial is ready to be shown
 - (BOOL)isInterstitialReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
 /// Tells if a rewarded ad is ready to be shown
 - (BOOL)isRewardedReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
+- (void)enablePolicyWithPolicy:(NSString * _Nonnull)policy sessionService:(id <SMSessionService> _Nullable)sessionService;
+- (void)addAnalyticsWithAnalytics:(id <SMAnalyticsListener> _Nonnull)analytics;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -613,8 +641,25 @@ SWIFT_PROTOCOL("_TtP12ScaleMonkAds8AdPolicy_")
 @end
 
 
+SWIFT_PROTOCOL("_TtP12ScaleMonkAds9Analytics_")
+@protocol Analytics
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+@end
+
+
 SWIFT_CLASS("_TtC12ScaleMonkAds24AnalyticsListenerWrapper")
-@interface AnalyticsListenerWrapper : NSObject
+@interface AnalyticsListenerWrapper : NSObject <Analytics>
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol SMWrapperAnalytics;
+
+SWIFT_CLASS("_TtC12ScaleMonkAds16AnalyticsWrapper")
+@interface AnalyticsWrapper : NSObject <Analytics>
+- (void)sendEventWithEventName:(NSString * _Nonnull)eventName eventParams:(NSDictionary<NSString *, id> * _Nonnull)eventParams;
+- (nonnull instancetype)initFrom:(id <SMWrapperAnalytics> _Nonnull)from OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -702,11 +747,11 @@ SWIFT_PROTOCOL("_TtP12ScaleMonkAds28RewardedVideoAdEventListener_")
 - (void)onRewardedNotReady;
 @end
 
-@protocol SMRewardedVideoAdEventListener;
+@protocol SMRewardedAdEventListener;
 
 SWIFT_CLASS("_TtC12ScaleMonkAds35RewardedVideoAdEventListenerWrapper")
 @interface RewardedVideoAdEventListenerWrapper : NSObject <RewardedVideoAdEventListener>
-- (nonnull instancetype)initWithListener:(id <SMRewardedVideoAdEventListener> _Nonnull)listener OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithListener:(id <SMRewardedAdEventListener> _Nonnull)listener OBJC_DESIGNATED_INITIALIZER;
 - (void)onRewardedClickWithTag:(NSString * _Nonnull)tag;
 - (void)onRewardedFailWithTag:(NSString * _Nonnull)tag;
 - (void)onRewardedFinishWithNoRewardWithTag:(NSString * _Nonnull)tag;
@@ -722,14 +767,17 @@ SWIFT_CLASS("_TtC12ScaleMonkAds35RewardedVideoAdEventListenerWrapper")
 
 @class UIViewController;
 @class SMBannerView;
+@protocol SMSessionService;
+@protocol SMAnalyticsListener;
 
 SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 @interface ScaleMonkAds : NSObject
-/// \param applicationId The id defined on the <a href="http://example.net/">ScaleMonk back-office.</a>
+/// \param applicationId The id defined on the <a href="https://mediation.scalemonk.com/">ScaleMonk dashboard.</a>
 ///
-/// \param extraParameters <em>Do not use</em>: This map defines internal test modes and other functionality.
+/// \param customUserId custom id to identify a user in tracking. If not provided an internal id will be used.
 ///
-- (nonnull instancetype)initWithApplicationId:(NSString * _Nonnull)applicationId extraParameters:(NSDictionary<NSString *, id> * _Nullable)extraParameters OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithApplicationId:(NSString * _Nullable)applicationId customUserId:(NSString * _Nullable)customUserId analytics:(NSArray<id <Analytics>> * _Nonnull)analytics policies:(NSArray<id <AdPolicy>> * _Nonnull)policies OBJC_DESIGNATED_INITIALIZER;
+- (void)setExtraInfo:(NSDictionary<NSString *, id> * _Nonnull)extraInfo;
 /// This method initializes the SDK.
 /// note:
 /// Make sure to call this and wait for the <code>done</code> block before calling any other method.
@@ -774,7 +822,7 @@ SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 ///
 - (void)showBannerAdWithViewController:(UIViewController * _Nonnull)viewController bannerView:(SMBannerView * _Nonnull)bannerView tag:(NSString * _Nonnull)tag;
 /// This removes the current banner from the <code>SMBannerView</code> and stops loading more banners.
-- (void)stopLoadingBanners;
+- (void)stopLoadingBannersWithTag:(NSString * _Nonnull)tag;
 /// This tag the user as under age or not to complain with COPPA regulation
 /// \param childDirectedTreatment set true if the user is under age, otherwise false. If the age is not tagged we assume the user is not under age.
 ///
@@ -783,10 +831,18 @@ SWIFT_CLASS("_TtC12ScaleMonkAds12ScaleMonkAds")
 - (void)setUserCantGiveGDPRConsentWithStatus:(BOOL)status;
 /// Call this method <em>after</em> the user as granted consent or not. (GDPR).
 - (void)setHasGDPRConsentWithStatus:(BOOL)status;
+/// Tells if interstitials ads are enabled for the current configuration
+- (BOOL)areInterstitialsEnabled SWIFT_WARN_UNUSED_RESULT;
+/// Tells if video ads are enabled for the current configuration
+- (BOOL)areVideosEnabled SWIFT_WARN_UNUSED_RESULT;
+/// Tells if banner ads are enabled for the current configuration
+- (BOOL)areBannersEnabled SWIFT_WARN_UNUSED_RESULT;
 /// Tells if an interstitial is ready to be shown
 - (BOOL)isInterstitialReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
 /// Tells if a rewarded ad is ready to be shown
 - (BOOL)isRewardedReadyToShowWithTag:(NSString * _Nonnull)tag SWIFT_WARN_UNUSED_RESULT;
+- (void)enablePolicyWithPolicy:(NSString * _Nonnull)policy sessionService:(id <SMSessionService> _Nullable)sessionService;
+- (void)addAnalyticsWithAnalytics:(id <SMAnalyticsListener> _Nonnull)analytics;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

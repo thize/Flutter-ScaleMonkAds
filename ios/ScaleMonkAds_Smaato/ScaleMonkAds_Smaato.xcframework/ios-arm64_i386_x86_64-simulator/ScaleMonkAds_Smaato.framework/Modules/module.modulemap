@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Smaato {
+  umbrella header "ScaleMonkAds_Smaato.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Smaato.Swift {
+    header "ScaleMonkAds_Smaato-Swift.h"
+    requires objc
+}

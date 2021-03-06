@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Tiktok {
+  umbrella header "ScaleMonkAds_Tiktok.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Tiktok.Swift {
+    header "ScaleMonkAds_Tiktok-Swift.h"
+    requires objc
+}

@@ -1,0 +1,11 @@
+framework module ScaleMonkAds_Amazon {
+  umbrella header "ScaleMonkAds_Amazon.h"
+
+  export *
+  module * { export * }
+}
+
+module ScaleMonkAds_Amazon.Swift {
+    header "ScaleMonkAds_Amazon-Swift.h"
+    requires objc
+}
