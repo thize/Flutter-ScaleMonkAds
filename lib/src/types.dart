@@ -1,5 +1,3 @@
-
-
 AdType adTypeFromString(String st) =>
     _stringToEnum(st: st, values: AdType.values) as AdType;
 

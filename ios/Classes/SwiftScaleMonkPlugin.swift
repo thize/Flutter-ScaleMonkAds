@@ -116,8 +116,8 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
                 result(status == ATTrackingManager.AuthorizationStatus.authorized)
             })
         }
-		else {
-			result(true)
-		}
+        else {
+          result(true)
+        }
     }
 }

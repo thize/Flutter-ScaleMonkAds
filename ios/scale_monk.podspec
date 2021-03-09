@@ -26,7 +26,7 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.static_framework = true
   s.vendored_framework = 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework', "ScaleMonkAds_AdMob/ScaleMonkAds_AdMob.xcframework", "ScaleMonkAds_AppLovin/ScaleMonkAds_AppLovin.xcframework", "ScaleMonkAds_Facebook/ScaleMonkAds_Facebook.xcframework", "ScaleMonkAds_IronSource/ScaleMonkAds_IronSource.xcframework", "ScaleMonkAds_UnityAds/ScaleMonkAds_UnityAds.xcframework", "ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework"
   
-  s.frameworks = 'iAd', 'WebKit', 'CoreTelephony', 'SystemConfiguration', 'AdSupport'
+  s.frameworks = 'iAd', 'WebKit', 'AppTrackingTransparency', 'CoreTelephony', 'SystemConfiguration', 'AdSupport'
   
   s.dependency 'UAObfuscatedString', '~> 0.3.2'
   s.dependency 'DTFoundation/DTASN1', '1.7.13'
