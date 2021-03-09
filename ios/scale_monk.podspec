@@ -38,7 +38,6 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.dependency 'AppLovinSDK', '6.15.1'
   s.dependency 'FBAudienceNetwork', '6.2.1'
   s.dependency 'IronSourceSDK', '7.0.3'
-  s.dependency 'TapjoySDK', '12.7.0'
   s.dependency 'UnityAds', '3.5.1'
   s.dependency 'VungleSDK-iOS', '6.8.1'
 end
