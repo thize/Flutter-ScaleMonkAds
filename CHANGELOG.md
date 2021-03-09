@@ -1,8 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.0.0+1] - 2021-03-08
+## [1.0.0+2] - 2021-03-08
 - Remove TapJoy Import
+- Fix requestTrackingAuthorization
 
 ## [1.0.0] - 2021-03-08
 - Update [SDK to 1.0.0](https://github.com/scalemonk/mediation-sdk-ios-framework/blob/master/CHANGELOG.md#100---2021-03-05)

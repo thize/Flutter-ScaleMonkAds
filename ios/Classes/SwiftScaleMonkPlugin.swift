@@ -111,7 +111,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     //! Tracking Authorization
 
     private func requestTrackingAuthorization(_ call: FlutterMethodCall, _ result: @escaping FlutterResult) {
-        if #available(iOS 14.5, *) {
+        if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
                 result(status == ATTrackingManager.AuthorizationStatus.authorized)
             })
