@@ -103,7 +103,7 @@ public class SwiftScaleMonkPlugin: NSObject, FlutterPlugin {
     }
 
     private func setCallbacks() {
-        // scaleMonkAds!.addVideoListener(self)
+        scaleMonkAds!.addRewardedListener(self)
         scaleMonkAds!.addInterstitialListener(self)
         scaleMonkAds!.addBannerListener(self)
     }
