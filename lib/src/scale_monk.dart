@@ -1,7 +1,7 @@
 library scale_monk;
 
 import 'package:flutter/services.dart';
-import 'package:scale_monk/scale_monk.dart';
+import 'types.dart';
 
 class ScaleMonk {
   static String? _iosApplicationId;
@@ -18,7 +18,7 @@ class ScaleMonk {
   /// ScaleMonk Dashboard, in the menu select Manage > Applications
   /// and copy the application id of your app.
   static Future<bool> initialize(
-      {String? androidApplicationId, String? iosApplicationId}) async {
+      {String? iosApplicationId}) async {
     _iosApplicationId = iosApplicationId;
     // Register the callbacks
     _setCallbacks();

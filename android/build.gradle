@@ -6,6 +6,9 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+        }
     }
 
     dependencies {
@@ -18,6 +21,9 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+        }
     }
 }
 
@@ -31,10 +37,24 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.scalemonk.libs:ads:1.0.19'
+    implementation 'com.scalemonk.libs:ads-admob:1.0.19'
+    implementation 'com.scalemonk.libs:ads-unityads:1.0.19'
+    implementation 'com.scalemonk.libs:ads-facebook:1.0.19'
+    implementation 'com.scalemonk.libs:ads-ironsource:1.0.19'
+    implementation 'com.scalemonk.libs:ads-vungle:1.0.19'
+    implementation 'com.scalemonk.libs:ads-applovin:1.0.19'
 }

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scale_monk_example">
    <application
-        android:label="scale_monk_example"
+        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -37,5 +37,11 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- <meta-data android:name="com.scalemonk.libs.ads.applicationId" 
+                   android:value="[YOUR ID HERE]" /> -->
+        <!-- <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/> -->
     </application>
 </manifest>

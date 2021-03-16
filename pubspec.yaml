@@ -17,8 +17,8 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
-      # android:
-      #   package: com.scale_monk
-      #   pluginClass: ScaleMonkPlugin
+      android:
+        package: com.scale_monk
+        pluginClass: ScaleMonkPlugin
       ios:
         pluginClass: ScaleMonkPlugin
