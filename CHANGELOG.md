@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 2021-03-16
+## [1.1.0+1] - 2021-03-16
 - Android SDK
 
 ## [1.0.0+4] - 2021-03-11

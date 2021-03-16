@@ -42,7 +42,7 @@ class ScaleMonk {
   /// Returns `true` if the ad is shown.
   static void show(AdType adType, {String? tag}) {
     _channel.invokeMethod('show', {
-      'adType': adType.index + 1,
+      'adType': adType.index,
       'tag': tag,
     });
   }
