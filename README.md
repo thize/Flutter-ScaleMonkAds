@@ -26,7 +26,7 @@ $ flutter pub get
 
 ### Android
 
-Change minSdkVersion to 19:
+Change minSdkVersion to 21:
 
 ```xml
 android {
