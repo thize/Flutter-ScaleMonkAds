@@ -4,21 +4,26 @@ import adsBannerListener
 import adsInterstitialListener
 import adsRewardedListener
 import android.app.Activity
-import androidx.annotation.NonNull
 import android.content.Context
+import androidx.annotation.NonNull
+import com.scalemonk.ads.ScaleMonkAds
 import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.embedding.engine.plugins.activity.ActivityAware
-import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodChannel.Result
-import com.scalemonk.ads.ScaleMonkAds
 
 class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   private lateinit var activity: Activity
   private lateinit var channel : MethodChannel
   private lateinit var context : Context
+
+  companion object {
+    var activityInstance: Activity? = null
+  }
+
 
   fun init(call: MethodCall, result: Result){
     ScaleMonkAds.initialize(activity, Runnable {
@@ -35,7 +40,6 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     val tag = args["tag"] as String
     when (adType) {
       0 -> {
-         // ScaleMonkAds.showBanner(activity, activity.findViewById(R.id.bannerContainer), tag)
       }
       1 -> {
         ScaleMonkAds.showInterstitial(activity, tag)
@@ -85,8 +89,11 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "scale_monk")
     channel.setMethodCallHandler(this)
+    flutterPluginBinding.getPlatformViewRegistry().registerViewFactory("plugins.com.scale_monk/banner", BannerViewFactory(flutterPluginBinding.binaryMessenger))
     context = flutterPluginBinding.applicationContext
   }
+
+
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     when (call.method) {
@@ -94,6 +101,9 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
         init(call, result)
       }
       "show" -> {
+        show(call, result)
+      }
+      "showBanner" -> {
         show(call, result)
       }
       "isRewardedReadyToShow" -> {
@@ -126,6 +136,7 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
     activity = binding.activity
+    activityInstance = binding.activity
   }
 
   override fun onDetachedFromActivityForConfigChanges() {}

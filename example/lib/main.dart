@@ -30,7 +30,6 @@ class _MyAppState extends State<MyApp> {
       print('Reward ad triggered the event $event');
     };
     initialize = await ScaleMonk.initialize(
-      androidApplicationId: 'sm-9999999-99999999',
       iosApplicationId: 'sm-9498217944987982-3021189126',
     );
     setState(() {});
