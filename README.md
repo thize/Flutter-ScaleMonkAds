@@ -53,6 +53,19 @@ android {
 </manifest>
 ```
 
+Change 
+```xml
+<application
+        android:label="App Name" 
+        android:icon="@mipmap/ic_launcher">
+```
+to 
+```xml
+<application
+        android:label="@strings/app_name" 
+        android:icon="@mipmap/ic_launcher">
+```
+
 ### iOS
 
 Admob 7.42.0 requires the App ID to be included in `Info.plist`. Failure to do so will result in a crash on launch of your app.\
