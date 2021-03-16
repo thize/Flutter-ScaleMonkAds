@@ -46,6 +46,10 @@ android {
         ...
         <meta-data android:name="com.scalemonk.libs.ads.applicationId" 
                    android:value="[YOUR SM APP ID HERE]" />
+        
+        <meta-data android:name="applovin.sdk.key" 
+              android:value="[YOUR APPLOVIN SDK KEY]"/>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
@@ -159,14 +163,23 @@ ScaleMonk.setIsApplicationChildDirected(Bool)
 
 After you collect all the permissions and the plugin properly initialized, you are ready to display the ads:
 
-### Banner, Interstitial & Reward ads
+### Interstitial & Reward ads
 
-To show an banner, interstitial or reward ad, call the function `ScaleMonk.show()` passing the type of ad that you would like to show as a paremeter (mandatory) and the Tag (optional)
+To show interstitial or reward ad, call the function `ScaleMonk.show()` passing the type of ad that you would like to show as a paremeter (mandatory) and the Tag (optional)
 
 ```dart
-ScaleMonk.show(AdType.banner, tag: "optional-tag");
 ScaleMonk.show(AdType.interstitial, tag: "optional-tag");
 ScaleMonk.show(AdType.reward, tag: "optional-tag");
+```
+
+### Banner
+
+To display a banner ad in your app, just include the SMBanner() widget somewhere in your widget tree. For example:
+
+```dart
+Center(
+  child: SMBanner()
+)
 ```
 
 ### Close Banner

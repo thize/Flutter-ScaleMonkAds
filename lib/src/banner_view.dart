@@ -1,32 +1,41 @@
-import 'dart:io';
+part of 'scale_monk.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:scale_monk/scale_monk.dart';
-
-class BannerView extends StatefulWidget {
-  const BannerView({Key? key}) : super(key: key);
+class SMBanner extends StatelessWidget {
+  const SMBanner({Key? key}) : super(key: key);
 
   @override
-  _BannerViewState createState() => _BannerViewState();
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder(
+      valueListenable: ScaleMonk._initialized,
+      builder: (c, bool initialized, w) {
+        if (initialized) return _BannerView();
+        return SizedBox();
+      },
+    );
+  }
 }
 
-class _BannerViewState extends State<BannerView> {
+class _BannerView extends StatefulWidget {
+  const _BannerView({Key? key}) : super(key: key);
+
+  @override
+  __BannerViewState createState() => __BannerViewState();
+}
+
+class __BannerViewState extends State<_BannerView> {
   final _channel = new MethodChannel('plugins.com.scale_monk/banner');
 
   @override
   void initState() {
     super.initState();
     if (Platform.isIOS) {
-      ScaleMonk.show(AdType.banner);
+      ScaleMonk.show(AdType._banner);
     }
   }
 
   @override
   void dispose() {
-    try {
-      ScaleMonk.stopLoadingBanners();
-    } catch (_) {}
+    ScaleMonk.stopLoadingBanners();
     super.dispose();
   }
 
@@ -38,19 +47,14 @@ class _BannerViewState extends State<BannerView> {
         width: 320,
       );
     }
-    return Container(
+    return SizedBox(
       height: 50,
       width: 320,
-      color: Colors.yellow,
       child: AndroidView(
         viewType: 'plugins.com.scale_monk/banner',
         key: UniqueKey(),
-        creationParams: {'Id': 1},
-        creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: (int i) {
-          Future.delayed(const Duration(seconds: 8)).whenComplete(() {
-            _channel.invokeMethod('show');
-          });
+          _channel.invokeMethod('show');
         },
       ),
     );

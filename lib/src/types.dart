@@ -1,8 +1,10 @@
+part of 'scale_monk.dart';
+
 AdType adTypeFromString(String st) =>
     _stringToEnum(st: st, values: AdType.values) as AdType;
 
 enum AdType {
-  banner,
+  _banner,
   interstitial,
   reward,
 }

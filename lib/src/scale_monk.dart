@@ -1,7 +1,13 @@
 library scale_monk;
 
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'types.dart';
+
+part 'banner_view.dart';
+part 'types.dart';
 
 class ScaleMonk {
   static String? _iosApplicationId;
@@ -11,21 +17,22 @@ class ScaleMonk {
 
   static const MethodChannel _channel = MethodChannel('scale_monk');
 
+  static ValueNotifier<bool> _initialized = ValueNotifier<bool>(false);
+
   //! ScaleMonk
 
   /// ScaleMonkAds uses your unique applicationId to
   /// identify your app. To obtain this id, go to the
   /// ScaleMonk Dashboard, in the menu select Manage > Applications
   /// and copy the application id of your app.
-  static Future<bool> initialize(
-      {String? iosApplicationId}) async {
+  static Future<bool> initialize({String? iosApplicationId}) async {
     _iosApplicationId = iosApplicationId;
     // Register the callbacks
     _setCallbacks();
-
-    return await _channel.invokeMethod('initialize', {
+    _initialized.value = await _channel.invokeMethod('initialize', {
       'iosApplicationId': _iosApplicationId,
     }) as bool;
+    return _initialized.value;
   }
 
   /// Shows an ad of certain type [adType].
@@ -35,7 +42,7 @@ class ScaleMonk {
   /// Returns `true` if the ad is shown.
   static void show(AdType adType, {String? tag}) {
     _channel.invokeMethod('show', {
-      'adType': adType.index,
+      'adType': adType.index + 1,
       'tag': tag,
     });
   }

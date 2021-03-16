@@ -98,9 +98,9 @@ class __BodyState extends State<_Body> {
                 print('isRewardedReadyToShow = $res');
               },
             ),
-            _showAd('Banner', AdType.banner),
             _showAd('Interstitial', AdType.interstitial),
             _showAd('Reward', AdType.reward),
+            SMBanner(),
             ElevatedButton(
               child: Text('stopLoadingBanners'),
               onPressed: () {
