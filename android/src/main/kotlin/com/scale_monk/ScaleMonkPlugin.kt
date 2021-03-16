@@ -1,10 +1,11 @@
 package com.scale_monk
 
-import AdsBannerListener
-import AdsInterstitialListener
-import AdsRewardedListener
-import android.content.Context
+import adsBannerListener
+import adsInterstitialListener
+import adsRewardedListener
+import android.app.Activity
 import androidx.annotation.NonNull
+import android.content.Context
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -12,12 +13,74 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 import com.scalemonk.ads.ScaleMonkAds
 
-class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler {
+class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+  private lateinit var activity: Activity
   private lateinit var channel : MethodChannel
   private lateinit var context : Context
+
+  fun init(call: MethodCall, result: Result){
+    ScaleMonkAds.initialize(activity, Runnable {
+      ScaleMonkAds.addRewardedListener(adsRewardedListener(channel))
+      ScaleMonkAds.addInterstitialListener(adsInterstitialListener(channel))
+      ScaleMonkAds.addBannerListener(adsBannerListener(channel))
+      result.success(true)
+    })
+  }
+
+  fun show(call: MethodCall, result: Result){
+    val args = call.arguments as Map<*, *>
+    val adType = args["adType"] as Int
+    val tag = args["tag"] as String
+    when (adType) {
+      0 -> {
+         // ScaleMonkAds.showBanner(activity, activity.findViewById(R.id.bannerContainer), tag)
+      }
+      1 -> {
+        ScaleMonkAds.showInterstitial(activity, tag)
+      }
+      2 -> {
+        ScaleMonkAds.showRewarded(activity, tag)
+      }
+      else -> {
+        result.notImplemented()
+      }
+    }
+    result.success(null)
+  }
+
+  fun isRewardedReadyToShow(call: MethodCall, result: Result){
+    val args = call.arguments as Map<*, *>
+    val tag = args["tag"] as String
+    result.success(ScaleMonkAds.isRewardedReadyToShow(tag))
+  }
+
+  fun stopLoadingBanners(call: MethodCall, result: Result){
+    // ScaleMonkAds.stopBanner(activity, activity.findViewById(R.id.bannerContainer), "")
+    result.success(null)
+  }
+
+  fun setHasGDPRConsent(call: MethodCall, result: Result){
+    val args = call.arguments as Map<*, *>
+    val status = args["status"] as Boolean
+    ScaleMonkAds.setHasGDPRConsent(status)
+    result.success(null)
+  }
+
+  fun setUserCantGiveGDPRConsent(call: MethodCall, result: Result){
+    val args = call.arguments as Map<*, *>
+    val status = args["status"] as Boolean
+    ScaleMonkAds.setUserCantGiveGDPRConsent(status)
+    result.success(null)
+  }
+
+  fun setIsApplicationChildDirected(call: MethodCall, result: Result){
+    val args = call.arguments as Map<*, *>
+    val value = args["value"] as Boolean
+    ScaleMonkAds.setIsApplicationChildDirected(value)
+    result.success(null)
+  }
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "scale_monk")
@@ -27,7 +90,7 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler {
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     when (call.method) {
-      "init" -> {
+      "initialize" -> {
         init(call, result)
       }
       "show" -> {
@@ -61,53 +124,11 @@ class ScaleMonkPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(null)
   }
 
-  fun init(call: MethodCall, result: Result){
-    ScaleMonkAds.initialize(context, {})
-    ScaleMonkAds.addRewardedListener(AdsRewardedListener(context, channel))
-    ScaleMonkAds.addInterstitialListener(AdsInterstitialListener(context, channel))
-    ScaleMonkAds.addBannerListener(AdsBannerListener(context, channel))
-    result.success(null)
+  override fun onAttachedToActivity(binding: ActivityPluginBinding) {
+    activity = binding.activity
   }
 
-  fun show(call: MethodCall, result: Result){
-    val args = call.arguments as Map<*, *>
-    val adType = args["adType"] as Int
-    val tag = args["tag"] as String
-    when (adType) {
-      0 -> {
-        ScaleMonkAds.showBanner(context, findViewById(R.id.bannerContainer), tag)
-      }
-      1 -> {
-        ScaleMonkAds.showInterstitial(context, tag)
-      }
-      2 -> {
-        ScaleMonkAds.showRewarded(context, tag)
-      }
-      else -> {
-
-      }
-    }
-    result(null)
-  }
-
-  fun isRewardedReadyToShow(call: MethodCall, result: Result){
-    result.success(null)
-  }
-
-  fun stopLoadingBanners(call: MethodCall, result: Result){
-    ScaleMonkAds.stopBanner(context, findViewById(R.id.bannerContainer), "")
-    result.success(null)
-  }
-
-  fun setHasGDPRConsent(call: MethodCall, result: Result){
-    result.success(null)
-  }
-
-  fun setUserCantGiveGDPRConsent(call: MethodCall, result: Result){
-    result.success(null)
-  }
-
-  fun setIsApplicationChildDirected(call: MethodCall, result: Result){
-    result.success(null)
-  }
+  override fun onDetachedFromActivityForConfigChanges() {}
+  override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {}
+  override fun onDetachedFromActivity() {}
 }

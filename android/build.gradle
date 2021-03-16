@@ -6,12 +6,14 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+        }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.7.2"
     }
 }
 
@@ -27,7 +29,6 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-// apply plugin: 'com.jfrog.artifactory'
 
 android {
     compileSdkVersion 30
@@ -36,11 +37,24 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.scalemonk.libs:ads:+'
+    implementation 'com.scalemonk.libs:ads-admob:+'
+    implementation 'com.scalemonk.libs:ads-unityads:+'
+    implementation 'com.scalemonk.libs:ads-facebook:+'
+    implementation 'com.scalemonk.libs:ads-ironsource:+'
+    implementation 'com.scalemonk.libs:ads-vungle:+'
+    implementation 'com.scalemonk.libs:ads-applovin:+'
 }

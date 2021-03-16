@@ -7,3 +7,5 @@ example/.fvm/fvm_config.json
 pubspec.lock
 
 *.lock
+
+.DS_Store

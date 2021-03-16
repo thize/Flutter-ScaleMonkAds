@@ -1,31 +1,35 @@
 import android.content.Context
-import com.scalemonk.ads.RewardedEventListener
+import com.scalemonk.libs.ads.core.delivery.RewardedEventListener
+import io.flutter.plugin.common.MethodChannel
 
 /**
  * Example implementation of the RewardedEventListener
  */
-internal class AdsRewardedListener(private var context: Context, channel: MethodChannel) : RewardedEventListener {
-    override fun onRewardedClick(tag: String?) {
-        channel.invokeMethod("onRewardedClick", null)
-    }
 
-    override fun onRewardedViewStart(tag: String?) {
-        channel.invokeMethod("onRewardedViewStart", null)
-    }
+fun adsRewardedListener(channel: MethodChannel) : RewardedEventListener {
+    return object : RewardedEventListener {
+        override fun onRewardedClick(tag: String?) {
+            channel.invokeMethod("onRewardedClick", null)
+        }
 
-    override fun onRewardedFinishWithNoReward(tag: String?) {
-        channel.invokeMethod("onRewardedFinishWithNoReward", null)
-    }
+        override fun onRewardedViewStart(tag: String?) {
+            channel.invokeMethod("onRewardedViewStart", null)
+        }
 
-    override fun onRewardedFinishWithReward(tag: String?) {
-        channel.invokeMethod("onRewardedFinishWithReward", null)
-    }
+        override fun onRewardedFinishWithNoReward(tag: String?) {
+            channel.invokeMethod("onRewardedFinishWithNoReward", null)
+        }
 
-    override fun onRewardedFail(tag: String?) {
-        channel.invokeMethod("onRewardedFail", null)
-    }
+        override fun onRewardedFinishWithReward(tag: String?) {
+            channel.invokeMethod("onRewardedFinishWithReward", null)
+        }
 
-    override fun onRewardedReady() {
-        channel.invokeMethod("onRewardedReady", null)
+        override fun onRewardedFail(tag: String?) {
+            channel.invokeMethod("onRewardedFail", null)
+        }
+
+        override fun onRewardedReady() {
+            channel.invokeMethod("onRewardedReady", null)
+        }
     }
 }
