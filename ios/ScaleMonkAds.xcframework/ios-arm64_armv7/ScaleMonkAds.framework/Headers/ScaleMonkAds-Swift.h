@@ -272,7 +272,7 @@ SWIFT_CLASS("_TtC12ScaleMonkAds26BannerEventListenerWrapper")
 ///   </li>
 /// </ul>
 SWIFT_CLASS("_TtC12ScaleMonkAds21CoppaCompliancePolicy")
-@interface CoppaCompliancePolicy : NSObject
+@interface CoppaCompliancePolicy : NSObject <AdPolicy>
 + (CoppaCompliancePolicy * _Nonnull)enabledByDefault SWIFT_WARN_UNUSED_RESULT;
 + (CoppaCompliancePolicy * _Nonnull)disabledByDefault SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -699,7 +699,7 @@ SWIFT_CLASS("_TtC12ScaleMonkAds26BannerEventListenerWrapper")
 ///   </li>
 /// </ul>
 SWIFT_CLASS("_TtC12ScaleMonkAds21CoppaCompliancePolicy")
-@interface CoppaCompliancePolicy : NSObject
+@interface CoppaCompliancePolicy : NSObject <AdPolicy>
 + (CoppaCompliancePolicy * _Nonnull)enabledByDefault SWIFT_WARN_UNUSED_RESULT;
 + (CoppaCompliancePolicy * _Nonnull)disabledByDefault SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

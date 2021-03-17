@@ -24,7 +24,7 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
 
   # ScaleMonkAds
   s.static_framework = true
-  s.vendored_framework = 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework', "ScaleMonkAds_AdMob/ScaleMonkAds_AdMob.xcframework", "ScaleMonkAds_AppLovin/ScaleMonkAds_AppLovin.xcframework", "ScaleMonkAds_Facebook/ScaleMonkAds_Facebook.xcframework", "ScaleMonkAds_IronSource/ScaleMonkAds_IronSource.xcframework", "ScaleMonkAds_UnityAds/ScaleMonkAds_UnityAds.xcframework", "ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework"
+  s.vendored_framework = 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework', 'ScaleMonkAds_AdMob/ScaleMonkAds_AdMob.xcframework', 'ScaleMonkAds_AppLovin/ScaleMonkAds_AppLovin.xcframework', 'ScaleMonkAds_Facebook/ScaleMonkAds_Facebook.xcframework', 'ScaleMonkAds_IronSource/ScaleMonkAds_IronSource.xcframework', 'ScaleMonkAds-UnityAds/ScaleMonkAds-UnityAds.xcframework', 'ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework', 'ScaleMonkAds-Mintegral/ScaleMonkAds-Mintegral.xcframework', 'ScaleMonkAds_InMobi/ScaleMonkAds_InMobi.xcframework', 'ScaleMonkAds_Fyber/ScaleMonkAds_Fyber.xcframework', 'ScaleMonkAds_AdColony/ScaleMonkAds_AdColony.xcframework'
   
   s.frameworks = 'iAd', 'WebKit', 'AppTrackingTransparency', 'CoreTelephony', 'SystemConfiguration', 'AdSupport'
   
@@ -34,10 +34,14 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'Willow', '~> 5.0'
   
+  s.dependency 'AdColony', '4.3.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
   s.dependency 'AppLovinSDK', '6.15.1'
   s.dependency 'FBAudienceNetwork', '6.2.1'
+  s.dependency 'Fyber_Marketplace_SDK', '7.8.0'
+  s.dependency 'InMobiSDK', '9.1.1'
   s.dependency 'IronSourceSDK', '7.0.3'
-  s.dependency 'UnityAds', '3.5.1'
   s.dependency 'VungleSDK-iOS', '6.8.1'
+  s.dependency 'MintegralAdSDK', '6.7.6.0'
+  s.dependency 'UnityAds', '3.6.0'
 end

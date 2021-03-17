@@ -5,8 +5,6 @@
 
 A Flutter plugin to display ads from ScaleMonk. It currently supports __Banner__, __Interstitial__ and __Reward__ ads.
 
-**Note: Currently only iOS platform is supported.**
-
 ## ⚙️ Installation
 
 **[ScaleMonk Docs](https://scalemonk.github.io/mediation-docs/#/)**
@@ -110,7 +108,6 @@ You can initialize ScaleMonk with the function:
 ```dart
 // Initialize ScaleMonk
 await ScaleMonk.initialize(
-    androidApplicationId: '<your-scaleMonk-android-id>',
     iosApplicationId: '<your-scaleMonk-ios-id>',
 );
 // At this point you are ready to display ads

@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2021-03-17
+- Update [iOS SDK to 1.1.0](https://github.com/scalemonk/mediation-sdk-ios-framework/blob/master/CHANGELOG.md#changelog)
+
 ## [1.1.0+1] - 2021-03-16
 - Android SDK
 
