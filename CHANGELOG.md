@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.2] - 2021-03-25
+- Update Android SDK to 1.0.22
+
 ## [1.2.1] - 2021-03-19
 - Fix Uiwebkit
 
