@@ -1,5 +1,5 @@
 import android.content.Context
-import com.scalemonk.libs.ads.core.delivery.BannerEventListener
+import com.scalemonk.ads.BannerEventListener
 import io.flutter.plugin.common.MethodChannel
 
 /**

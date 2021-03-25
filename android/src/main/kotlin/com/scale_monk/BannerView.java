@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.scalemonk.ads.ScaleMonkAds;
-import com.scalemonk.libs.ads.core.domain.banner.BannerContainer;
+import com.scalemonk.ads.BannerContainer;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;

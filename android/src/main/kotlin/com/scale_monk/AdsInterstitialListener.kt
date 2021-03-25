@@ -1,5 +1,5 @@
 import android.content.Context
-import com.scalemonk.libs.ads.core.delivery.InterstitialEventListener
+import com.scalemonk.ads.InterstitialEventListener
 import io.flutter.plugin.common.MethodChannel
 
 
