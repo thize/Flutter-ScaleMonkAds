@@ -1,5 +1,5 @@
 import android.content.Context
-import com.scalemonk.libs.ads.core.delivery.RewardedEventListener
+import com.scalemonk.ads.RewardedEventListener
 import io.flutter.plugin.common.MethodChannel
 
 /**
@@ -30,6 +30,10 @@ fun adsRewardedListener(channel: MethodChannel) : RewardedEventListener {
 
         override fun onRewardedReady() {
             channel.invokeMethod("onRewardedReady", null)
+        }
+
+        override fun onRewardedFailedToLoad() {
+            //TODO implement me
         }
     }
 }
