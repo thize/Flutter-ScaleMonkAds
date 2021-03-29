@@ -24,14 +24,17 @@ $ flutter pub get
 
 ### Android
 
-Change minSdkVersion to 21:
+Change android/app/build.gradle:
 
 ```xml
 android {
+    compileSdkVersion 29
+    
     ...
     defaultConfig {
         ...
         minSdkVersion 21
+        targetSdkVersion 29
         ...
     }
 }
