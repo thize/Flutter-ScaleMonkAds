@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'scale_monk'
-  s.version          = '1.0.0'
+  s.version          = '1.2.0'
   s.summary          = 'A Flutter plugin to display ads from ScaleMonk.'
   s.description      = <<-DESC
 A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS 14+ and GDPR/CCPA consent.
@@ -24,9 +24,7 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
 
   # ScaleMonkAds
   s.static_framework = true
-  s.vendored_framework = 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework', 'ScaleMonkAds_AdMob/ScaleMonkAds_AdMob.xcframework', 'ScaleMonkAds_AppLovin/ScaleMonkAds_AppLovin.xcframework', 'ScaleMonkAds_Facebook/ScaleMonkAds_Facebook.xcframework', 'ScaleMonkAds_IronSource/ScaleMonkAds_IronSource.xcframework', 'ScaleMonkAds-UnityAds/ScaleMonkAds-UnityAds.xcframework', 'ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework', 'ScaleMonkAds-Mintegral/ScaleMonkAds-Mintegral.xcframework', 'ScaleMonkAds_Fyber/ScaleMonkAds_Fyber.xcframework', 'ScaleMonkAds_AdColony/ScaleMonkAds_AdColony.xcframework'
-  # 'ScaleMonkAds_InMobi/ScaleMonkAds_InMobi.xcframework',
-  
+  s.vendored_framework = 'ScaleMonkAds_AdColony/ScaleMonkAds_AdColony.xcframework', 'ScaleMonkAds_Fyber/ScaleMonkAds_Fyber.xcframework', 'ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework', 'ScaleMonkAds-AdMob/ScaleMonkAds-AdMob.xcframework', 'ScaleMonkAds-AppLovin/ScaleMonkAds-AppLovin.xcframework', 'ScaleMonkAds-Facebook/ScaleMonkAds-Facebook.xcframework', 'ScaleMonkAds-IronSource/ScaleMonkAds-IronSource.xcframework', 'ScaleMonkAds-Mintegral/ScaleMonkAds-Mintegral.xcframework', 'ScaleMonkAds-Tapjoy/ScaleMonkAds-Tapjoy.xcframework', 'ScaleMonkAds-UnityAds/ScaleMonkAds-UnityAds.xcframework', 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework'
   s.frameworks = 'iAd', 'WebKit', 'AppTrackingTransparency', 'CoreTelephony', 'SystemConfiguration', 'AdSupport'
   
   s.dependency 'UAObfuscatedString', '~> 0.3.2'
@@ -37,12 +35,12 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   
   s.dependency 'AdColony', '4.3.1'
   s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
-  s.dependency 'AppLovinSDK', '6.15.1'
+  s.dependency 'AppLovinSDK', '10.2.0'
   s.dependency 'FBAudienceNetwork', '6.2.1'
   s.dependency 'Fyber_Marketplace_SDK', '7.8.0'
-  # s.dependency 'InMobiSDK', '9.1.1'
-  s.dependency 'IronSourceSDK', '7.0.3'
+  s.dependency 'IronSourceSDK', '7.1.5.0'
   s.dependency 'VungleSDK-iOS', '6.8.1'
   s.dependency 'MintegralAdSDK', '6.7.6.0'
-  s.dependency 'UnityAds', '3.6.0'
+  s.dependency 'UnityAds', '3.6.0.0'
+  s.dependency 'TapjoySDK', '12.7.1'
 end

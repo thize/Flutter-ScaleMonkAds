@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2021-04-30
+- Update iOS SDK to 1.2.0
+- Update Android SDK to 1.1.0
+
 ## [1.2.3] - 2021-03-25
 - Fix Android compileSdkVersion
 

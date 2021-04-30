@@ -17,7 +17,7 @@ class ScaleMonk {
 
   static const MethodChannel _channel = MethodChannel('scale_monk');
 
-  static ValueNotifier<bool> _initialized = ValueNotifier<bool>(false);
+  static ValueNotifier<bool> initialized = ValueNotifier<bool>(false);
 
   //! ScaleMonk
 
@@ -29,10 +29,10 @@ class ScaleMonk {
     _iosApplicationId = iosApplicationId;
     // Register the callbacks
     _setCallbacks();
-    _initialized.value = await _channel.invokeMethod('initialize', {
+    initialized.value = await _channel.invokeMethod('initialize', {
       'iosApplicationId': _iosApplicationId,
     }) as bool;
-    return _initialized.value;
+    return initialized.value;
   }
 
   /// Shows an ad of certain type [adType].
@@ -41,15 +41,18 @@ class ScaleMonk {
   ///
   /// Returns `true` if the ad is shown.
   static void show(AdType adType, {String? tag}) {
-    _channel.invokeMethod('show', {
-      'adType': adType.index,
-      'tag': tag,
-    });
+    if (initialized.value) {
+      _channel.invokeMethod('show', {
+        'adType': adType.index,
+        'tag': tag,
+      });
+    }
   }
 
   /// You'll likely want to check availability before offering
   /// the user the possibility of seeing an ad to get a reward using this method
   static Future<bool> isRewardedReadyToShow({String? tag}) async {
+    if (!initialized.value) return false;
     return await _channel.invokeMethod('isRewardedReadyToShow', {
       'tag': tag,
     }) as bool;
@@ -57,7 +60,9 @@ class ScaleMonk {
 
   /// This removes the current `Banner` and stop loading more banners.
   static void stopLoadingBanners() {
-    _channel.invokeMethod('stopLoadingBanners');
+    if (initialized.value) {
+      _channel.invokeMethod('stopLoadingBanners');
+    }
   }
 
   /// In order to facilitate compliance with General Data Protection Regulation (GDPR),

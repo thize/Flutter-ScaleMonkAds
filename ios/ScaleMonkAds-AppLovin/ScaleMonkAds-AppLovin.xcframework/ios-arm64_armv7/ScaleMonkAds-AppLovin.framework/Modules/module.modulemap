@@ -1,0 +1,4 @@
+framework module ScaleMonkAds_AppLovin {
+  header "ScaleMonkAds_AppLovin-Swift.h"
+  requires objc
+}

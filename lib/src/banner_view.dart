@@ -6,7 +6,7 @@ class SMBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: ScaleMonk._initialized,
+      valueListenable: ScaleMonk.initialized,
       builder: (c, bool initialized, w) {
         if (initialized) return _BannerView();
         return SizedBox();

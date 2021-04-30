@@ -1,0 +1,4 @@
+framework module ScaleMonkAds_IronSource {
+  header "ScaleMonkAds_IronSource-Swift.h"
+  requires objc
+}

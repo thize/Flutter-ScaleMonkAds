@@ -41,17 +41,6 @@ android {
 ```
 
 ```xml
-buildTypes {
-        release {
-            ...
-            minifyEnabled false
-            shrinkResources false
-            ...
-        }
-    }
-```
-
-```xml
 <manifest>
     ...
     <application>

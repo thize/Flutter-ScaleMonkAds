@@ -110,7 +110,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ihaFTr8C0BOYvAv4SldWFz8wQaA=
+		ZGdR8LZSnJPKC09/i3fuOeE47D8=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sPXFa4Xx6KMzuBo4srtGD1bOFNs=
+		5fa88OnrBb9465H+5rx2ZsliQY4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/i386.swiftmodule</key>
 		<data>
-		sPXFa4Xx6KMzuBo4srtGD1bOFNs=
+		5fa88OnrBb9465H+5rx2ZsliQY4=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LMa8XgFFkorCof5k4nUQ6WhUk9o=
+		JBbf9HaHytmQZV8On58rVyWUcKk=
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		LMa8XgFFkorCof5k4nUQ6WhUk9o=
+		JBbf9HaHytmQZV8On58rVyWUcKk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -479,11 +479,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sPXFa4Xx6KMzuBo4srtGD1bOFNs=
+			5fa88OnrBb9465H+5rx2ZsliQY4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EVhhTOcGzVWips7Q5Fbf0qnUNL/Ep+8WqBvtbGS9Qzc=
+			qUWZFx5IArMZo6SgkRT6glEmE9bw3NvBVTMHU7MJiu8=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/i386.swiftdoc</key>
@@ -512,11 +512,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sPXFa4Xx6KMzuBo4srtGD1bOFNs=
+			5fa88OnrBb9465H+5rx2ZsliQY4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EVhhTOcGzVWips7Q5Fbf0qnUNL/Ep+8WqBvtbGS9Qzc=
+			qUWZFx5IArMZo6SgkRT6glEmE9bw3NvBVTMHU7MJiu8=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -545,11 +545,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LMa8XgFFkorCof5k4nUQ6WhUk9o=
+			JBbf9HaHytmQZV8On58rVyWUcKk=
 			</data>
 			<key>hash2</key>
 			<data>
-			DulpwsNl02r2vgOdJwi2y6H5WVO5Oi+A5sfUH2i9Cyk=
+			hAs+mqD92jrljdZNSuQj+1kRC5fcTw6y5jgeh7XP9X0=
 			</data>
 		</dict>
 		<key>Modules/ScaleMonkAds.swiftmodule/x86_64.swiftdoc</key>
@@ -578,11 +578,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LMa8XgFFkorCof5k4nUQ6WhUk9o=
+			JBbf9HaHytmQZV8On58rVyWUcKk=
 			</data>
 			<key>hash2</key>
 			<data>
-			DulpwsNl02r2vgOdJwi2y6H5WVO5Oi+A5sfUH2i9Cyk=
+			hAs+mqD92jrljdZNSuQj+1kRC5fcTw6y5jgeh7XP9X0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

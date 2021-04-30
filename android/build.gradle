@@ -50,11 +50,11 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.scalemonk.libs:ads:1.0.22'
-    implementation 'com.scalemonk.libs:ads-admob:19.7.0.1'
-    implementation 'com.scalemonk.libs:ads-unityads:+'
-    implementation 'com.scalemonk.libs:ads-facebook:+'
-    implementation 'com.scalemonk.libs:ads-ironsource:+'
-    implementation 'com.scalemonk.libs:ads-vungle:+'
-    implementation 'com.scalemonk.libs:ads-applovin:+'
+    implementation 'com.scalemonk.libs:ads:1.1.0'
+    implementation 'com.scalemonk.libs:ads-admob:19.7.0.2'
+    implementation 'com.scalemonk.libs:ads-unityads:3.6.0.1'
+    implementation 'com.scalemonk.libs:ads-facebook:6.2.1.1'
+    implementation 'com.scalemonk.libs:ads-ironsource:7.1.0.2.2'
+    implementation 'com.scalemonk.libs:ads-vungle:6.8.0.4'
+    implementation 'com.scalemonk.libs:ads-applovin:9.15.3.5'
 }
