@@ -19,26 +19,26 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.requires_arc = true
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386', 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => "i386, arm64" }
   s.swift_version = '5.1'
 
   # ScaleMonkAds
   s.static_framework = true
+  
   s.dependency 'ScaleMonkAds', '1.3.0'
   s.dependency 'ScaleMonkAds-AdColony', '4.3.1.2'
   s.dependency 'ScaleMonkAds-AdMob', '7.69.0.2'
   s.dependency 'ScaleMonkAds-AppLovin', '6.15.2.0'
-  # s.dependency 'ScaleMonkAds-Charboost', '8.4.0.1' #
+  s.dependency 'ScaleMonkAds-Chartboost', '8.4.0.1'
   s.dependency 'ScaleMonkAds-Facebook', '6.2.1.2'
   s.dependency 'ScaleMonkAds-Fyber', '7.8.0.1'
   s.dependency 'ScaleMonkAds-InMobi', '9.1.1.3'
   s.dependency 'ScaleMonkAds-IronSource', '7.0.3.1'
   s.dependency 'ScaleMonkAds-Mintegral', '6.7.6.0.1'
-  s.dependency 'ScaleMonkAds-Mopub', '5.14.1.2' #
-  s.dependency 'ScaleMonkAds-Smaato', '21.6.10.1' #
+  s.dependency 'ScaleMonkAds-Mopub', '5.14.1.2'
+  s.dependency 'ScaleMonkAds-Smaato', '21.6.10.1'
   s.dependency 'ScaleMonkAds-Tapjoy', '12.7.0.1'
-  s.dependency 'ScaleMonkAds-Tiktok', '3.3.6.3' #
+  s.dependency 'ScaleMonkAds-Tiktok', '3.3.6.3'
   s.dependency 'ScaleMonkAds-UnityAds', '3.6.0.0'
   s.dependency 'ScaleMonkAds-Vungle', '6.8.1.1'
 end
