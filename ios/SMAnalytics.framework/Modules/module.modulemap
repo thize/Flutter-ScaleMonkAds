@@ -1,6 +1,0 @@
-framework module SMAnalytics {
-  umbrella header "SMAnalytics.h"
-
-  export *
-  module * { export * }
-}

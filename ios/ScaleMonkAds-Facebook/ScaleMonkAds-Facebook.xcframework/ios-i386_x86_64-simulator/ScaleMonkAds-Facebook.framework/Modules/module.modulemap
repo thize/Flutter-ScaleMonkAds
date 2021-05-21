@@ -1,4 +1,0 @@
-framework module ScaleMonkAds_Facebook {
-  header "ScaleMonkAds_Facebook-Swift.h"
-  requires objc
-}

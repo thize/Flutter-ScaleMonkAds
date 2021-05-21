@@ -1,4 +1,0 @@
-framework module ScaleMonkAds_AdMob {
-  header "ScaleMonkAds_AdMob-Swift.h"
-  requires objc
-}
