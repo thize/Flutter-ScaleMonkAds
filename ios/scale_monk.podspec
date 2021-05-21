@@ -19,29 +19,26 @@ A Flutter plugin to display ads from ScaleMonk; it supports the new reqs for iOS
   s.requires_arc = true
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => "i386, arm64" }
   s.swift_version = '5.1'
 
   # ScaleMonkAds
   s.static_framework = true
-  s.vendored_framework = 'ScaleMonkAds_AdColony/ScaleMonkAds_AdColony.xcframework', 'ScaleMonkAds_Fyber/ScaleMonkAds_Fyber.xcframework', 'ScaleMonkAds_Vungle/ScaleMonkAds_Vungle.xcframework', 'ScaleMonkAds-AdMob/ScaleMonkAds-AdMob.xcframework', 'ScaleMonkAds-AppLovin/ScaleMonkAds-AppLovin.xcframework', 'ScaleMonkAds-Facebook/ScaleMonkAds-Facebook.xcframework', 'ScaleMonkAds-InMobi/ScaleMonkAds-InMobi.xcframework', 'ScaleMonkAds-IronSource/ScaleMonkAds-IronSource.xcframework', 'ScaleMonkAds-Mintegral/ScaleMonkAds-Mintegral.xcframework', 'ScaleMonkAds-Tapjoy/ScaleMonkAds-Tapjoy.xcframework', 'ScaleMonkAds-UnityAds/ScaleMonkAds-UnityAds.xcframework', 'ScaleMonkAds.xcframework', 'SMAnalytics.framework', 'SMDeviceInfo.framework'
-  s.frameworks = 'iAd', 'WebKit', 'AppTrackingTransparency', 'CoreTelephony', 'SystemConfiguration', 'AdSupport'
   
-  s.dependency 'UAObfuscatedString', '~> 0.3.2'
-  s.dependency 'DTFoundation/DTASN1', '1.7.13'
-  
-  s.dependency 'RxSwift', '~> 5'
-  s.dependency 'Willow', '~> 5.0'
-  
-  s.dependency 'AdColony', '4.3.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
-  s.dependency 'AppLovinSDK', '10.2.0'
-  s.dependency 'FBAudienceNetwork', '6.2.1'
-  s.dependency 'Fyber_Marketplace_SDK', '7.8.0'
-  s.dependency 'IronSourceSDK', '7.1.5.0'
-  s.dependency 'VungleSDK-iOS', '6.8.1'
-  s.dependency 'MintegralAdSDK', '6.7.6.0'
-  s.dependency 'UnityAds', '3.6.0.0'
-  s.dependency 'TapjoySDK', '12.7.1'
-  s.dependency 'InMobiSDK', '9.1.1'
+  s.dependency 'ScaleMonkAds', '1.3.0'
+  s.dependency 'ScaleMonkAds-AdColony', '4.3.1.2'
+  s.dependency 'ScaleMonkAds-AdMob', '7.69.0.2'
+  s.dependency 'ScaleMonkAds-AppLovin', '6.15.2.0'
+  s.dependency 'ScaleMonkAds-Chartboost', '8.4.0.1'
+  s.dependency 'ScaleMonkAds-Facebook', '6.2.1.2'
+  s.dependency 'ScaleMonkAds-Fyber', '7.8.0.1'
+  s.dependency 'ScaleMonkAds-InMobi', '9.1.1.3'
+  s.dependency 'ScaleMonkAds-IronSource', '7.0.3.1'
+  s.dependency 'ScaleMonkAds-Mintegral', '6.7.6.0.1'
+  s.dependency 'ScaleMonkAds-Mopub', '5.14.1.2'
+  s.dependency 'ScaleMonkAds-Smaato', '21.6.10.1'
+  s.dependency 'ScaleMonkAds-Tapjoy', '12.7.0.1'
+  s.dependency 'ScaleMonkAds-Tiktok', '3.3.6.3'
+  s.dependency 'ScaleMonkAds-UnityAds', '3.6.0.0'
+  s.dependency 'ScaleMonkAds-Vungle', '6.8.1.1'
 end

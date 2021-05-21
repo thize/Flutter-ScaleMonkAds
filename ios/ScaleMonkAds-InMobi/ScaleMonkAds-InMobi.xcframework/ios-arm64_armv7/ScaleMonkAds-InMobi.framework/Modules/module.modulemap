@@ -1,4 +1,0 @@
-framework module ScaleMonkAds_InMobi {
-  header "ScaleMonkAds_InMobi-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module ScaleMonkAds_Tapjoy {
-  header "ScaleMonkAds_Tapjoy-Swift.h"
-  requires objc
-}

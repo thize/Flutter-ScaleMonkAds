@@ -91,6 +91,9 @@ platform :ios, '10.0'
 add these lines:
 
 ```ruby
+source 'https://github.com/scalemonk/ios-podspecs-framework'
+source 'https://github.com/CocoaPods/Specs.git'
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

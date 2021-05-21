@@ -1,4 +1,0 @@
-framework module ScaleMonkAds_Mintegral {
-  header "ScaleMonkAds_Mintegral-Swift.h"
-  requires objc
-}
