@@ -6,14 +6,23 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven { url "https://chartboostmobile.bintray.com/Chartboost" }
+        maven { url "https://fyber.bintray.com/marketplace" }
+        maven { url "https://dl.bintray.com/mintegral-official/mintegral_ad_sdk_android_for_oversea" }
+        maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
         maven {
             url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+            mavenContent {
+               releasesOnly()
+            }
         }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.15.2'
     }
 }
 
@@ -21,8 +30,17 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven { url "https://chartboostmobile.bintray.com/Chartboost" }
+        maven { url "https://fyber.bintray.com/marketplace" }
+        maven { url "https://dl.bintray.com/mintegral-official/mintegral_ad_sdk_android_for_oversea" }
+        maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
         maven {
             url 'https://scalemonk.jfrog.io/artifactory/scalemonk-gradle-prod'
+            mavenContent {
+               releasesOnly()
+            }
         }
     }
 }
@@ -50,11 +68,19 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.scalemonk.libs:ads:1.1.0'
-    implementation 'com.scalemonk.libs:ads-admob:19.7.0.2'
-    implementation 'com.scalemonk.libs:ads-unityads:3.6.0.1'
-    implementation 'com.scalemonk.libs:ads-facebook:6.2.1.1'
-    implementation 'com.scalemonk.libs:ads-ironsource:7.1.0.2.2'
-    implementation 'com.scalemonk.libs:ads-vungle:6.8.0.4'
-    implementation 'com.scalemonk.libs:ads-applovin:9.15.3.5'
+    implementation 'com.scalemonk.libs:ads:+'
+    implementation "com.scalemonk.libs:ads-adcolony:+"
+    implementation "com.scalemonk.libs:ads-admob:+"
+    implementation "com.scalemonk.libs:ads-applovin:+"
+    implementation "com.scalemonk.libs:ads-chartboost:+"
+    implementation "com.scalemonk.libs:ads-facebook:+"
+    implementation "com.scalemonk.libs:ads-fyber:+"
+    implementation "com.scalemonk.libs:ads-inmobi:+"
+    implementation "com.scalemonk.libs:ads-ironsource:+"
+    implementation "com.scalemonk.libs:ads-mintegral:+"
+    implementation "com.scalemonk.libs:ads-mopub:+"
+    implementation "com.scalemonk.libs:ads-smaato:+"
+    implementation "com.scalemonk.libs:ads-tiktok:+"
+    implementation "com.scalemonk.libs:ads-unityads:+"
+    implementation "com.scalemonk.libs:ads-vungle:+"
 }
