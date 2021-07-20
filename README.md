@@ -108,6 +108,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "i386, arm64"
       if ['RxSwift', 'Willow'].include? target.name
         config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end

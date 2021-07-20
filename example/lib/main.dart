@@ -29,10 +29,10 @@ class _MyAppState extends State<MyApp> {
     ScaleMonk.setRewardCallback = (RewardedVideoAdEvent event) {
       print('Reward ad triggered the event $event');
     };
-    ScaleMonk.setHasGDPRConsent(status: true);
     initialize = await ScaleMonk.initialize(
       iosApplicationId: 'sm-9498217944987982-3021189126',
     );
+    ScaleMonk.setHasGDPRConsent(status: true);
     setState(() {});
   }
 
