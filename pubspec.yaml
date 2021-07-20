@@ -1,6 +1,6 @@
 name: scale_monk
 description: A Flutter plugin to display ads from ScaleMonk. It currently supports Banner, Interstitial and Reward ads.
-version: 1.5.0
+version: 2.0.0
 homepage: https://github.com/thize/flutter_scale_monk
 
 environment:

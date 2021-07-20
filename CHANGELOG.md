@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2021-07-17
+- Improve iOS Banners
+
 ## [1.5.0] - 2021-05-31
 - Update Android AdNets
 
